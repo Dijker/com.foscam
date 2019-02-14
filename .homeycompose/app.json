@@ -1,0 +1,55 @@
+{
+    "id": "com.foscam",
+    "version": "1.0.0",
+    "compatibility": ">=2.0.0",
+    "sdk": 2,
+    "brandColor": "#EC0928",
+    "name": {
+        "en": "Foscam",
+        "nl": "Foscam"
+    },
+    "description": {
+        "en": "Adds support for Foscam IPCameras.",
+        "nl": "Voegt ondersteuning toe voor Foscam IPCamera's."
+    },
+    "category": [
+        "security"
+    ],
+    "tags": {
+        "en": [
+            "foscam",
+            "ipcam",
+            "camera",
+            "webcam",
+            "home",
+            "kantoor",
+            "security"
+        ],
+        "nl": [
+            "foscam",
+            "ipcam",
+            "camera",
+            "webcam",
+            "thuis",
+            "office",
+            "beveliging"
+        ]
+    },
+    "permissions": [],
+    "images": {
+        "large": "/assets/images/large.png",
+        "small": "/assets/images/small.png"
+    },
+    "author": {
+        "name": "Edwin van de Pol",
+        "email": "github@edwinvandepol.nl"
+    },
+    "contributors": {
+        "developers": [
+            {
+                "name": "Edwin van de Pol",
+                "email": "github@edwinvandepol.nl"
+            }
+        ]
+    }
+}

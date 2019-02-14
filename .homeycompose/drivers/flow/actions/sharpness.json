@@ -1,0 +1,15 @@
+{
+    "title": {
+        "en": "Set the sharpness",
+        "nl": "Zet de scherpte"
+    },
+    "args": [
+        {
+            "name": "value",
+            "type": "number",
+            "min": 0,
+            "max": 100,
+            "step": 1
+        }
+    ]
+}

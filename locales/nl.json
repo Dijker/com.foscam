@@ -1,0 +1,31 @@
+{
+    "error": {
+        "access_denied": "U heeft niet voldoende rechten om deze camera te beheren.",
+        "connection_refused": "Verbinding is geweigerd.",
+        "insert_valid_value": "Vul een geldige waarde in.",
+        "missing_settings": "Niet alle instellingen van de app zijn ingevuld.",
+        "unknown_error": "Er is een onbekende fout opgetreden.",
+        "username_password_invalid": "Gebruikersnaam of wachtwoord is ongeldig."
+    },
+    "from": "Afzender",
+    "hostname": "Hostnaam / IP adres",
+    "pair": {
+        "intro": "Geef hier onder de netwerk- en inloggegevens van de camera in.<br /><strong>Let op:</strong> Het account dient over 'admin' rechten te beschikken.",
+        "connect": "Verbinden",
+        "successfull": "Uw camera is succesvol gekoppeld!",
+        "title": "Apparaat toevoegen"
+    },
+    "password": "Wachtwoord",
+    "port": "Poort",
+    "recipient": "Ontvanger",
+    "save": "Opslaan",
+    "sendAs": "Stuur snapshot",
+    "settings": {
+        "title": "SMTP configuratie",
+        "intro": "Beheer uw SMTP-instellingen, die gebruikt worden om de snapshot te e-mailen.",
+        "attachment": "Als bijlage bij de e-mail",
+        "inline": "Als afbeelding in de e-mail",
+        "saved": "Instellingen zijn succesvol opslagen!"
+    },
+    "username": "Gebruikersnaam"
+}

@@ -1,0 +1,19 @@
+{
+    "type": "boolean",
+    "title": {
+        "en": "Mirror view",
+        "nl": "Spiegelbeeld"
+    },
+    "getable": true,
+    "setable": true,
+    "uiComponent": "toggle",
+    "insights": true,
+    "insightsTitleTrue": {
+        "en": "Mirror view on",
+        "en": "Spiegelbeeld aan"
+    },
+    "insightsTitleFalse": {
+        "en": "Mirror view off",
+        "en": "Spiegelbeeld uit"
+    }
+}

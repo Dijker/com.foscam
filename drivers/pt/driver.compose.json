@@ -1,0 +1,10 @@
+{
+    "id": "PTCamera",
+    "name": {
+        "en": "PT Camera",
+        "nl": "PT Camera"
+    },
+    "$extends": [
+        "defaults"
+    ]
+}

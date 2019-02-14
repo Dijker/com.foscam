@@ -1,0 +1,126 @@
+<link href="{{assets}}/css/styles.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="/manager/webserver/assets/js/jquery.js"></script>
+
+<script type="text/javascript">
+    Homey.setTitle(__('pair.title'));
+</script>
+
+<p data-i18n="pair.intro"></p>
+
+<div id="form">
+    <div class="form-control">
+        <label data-i18n="hostname"></label>
+        <input id="host" type="text" placeholder="192.168.1.1" value="" />
+    </div>
+
+    <div class="form-control">
+        <label data-i18n="port"></label>
+        <input id="port" type="text" pattern="\d*" placeholder="88" value="" />
+    </div>
+
+    <div class="form-control">
+        <label data-i18n="username"></label>
+        <input id="username" type="text" placeholder="admin" value="" />
+    </div>
+
+    <div class="form-control">
+        <label data-i18n="password"></label>
+        <input id="password" type="password" value="" />
+    </div>
+
+    <div class="form-control">
+        <button id="connect" class="button-primary" data-i18n="pair.connect"></button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('link[href$="homey.css"]').remove();
+
+    $('#connect').on('click', function (e) {
+
+        if (!validateForm()) {
+            return false;
+        }
+
+        Homey.showLoadingOverlay();
+
+        var settings = {
+            host     : $('#host').val(),
+            port     : Number($('#port').val()),
+            username : $('#username').val(),
+            password : $('#password').val()
+        };
+
+        Homey.emit('addDevice', settings, function (err, res) {
+            if (err) {
+                Homey.hideLoadingOverlay();
+                Homey.alert(err.message, 'error');
+                return false;
+            }
+
+            settings.product_name = res.productName;
+            settings.serial_number = res.serialNo;
+            settings.mac = res.mac.toString(16).match(/.{1,2}/g).reverse().join(':');
+            settings.firmware_version = res.firmwareVer;
+            settings.hardware_version = res.hardwareVer;
+
+            var device = {
+                name: res.devName,
+                data: {
+                    id: res.mac
+                },
+                settings: settings
+            };
+
+            Homey.addDevice(device, function (err, result) {
+                if (err) {
+                    Homey.hideLoadingOverlay();
+                    Homey.alert(err, 'error');
+                } else {
+                    Homey.alert(__('pair.successfull'), 'info');
+                    Homey.done();
+                }
+            });
+        });
+
+    });
+
+    function validateForm () {
+
+        let error = false;
+        let errMsg = Homey.__('error.insert_valid_value');
+
+        $('.validation-error').remove();
+        $('.invalid').removeClass('invalid');
+
+        if ($('#host').val().length === 0) {
+            $('#host').addClass('invalid');
+            $('<p class="validation-error">' + errMsg + '</p>').insertAfter('#host');
+            error = true;
+        }
+
+        if ($('#port').val().length === 0) {
+            $('#port').addClass('invalid');
+            $('<p class="validation-error">' + errMsg + '</p>').insertAfter('#port');
+            error = true;
+        }
+
+        if ($('#username').val().length === 0) {
+            $('#username').addClass('invalid');
+            $('<p class="validation-error">' + errMsg + '</p>').insertAfter('#username');
+            error = true;
+        }
+
+        if ($('#password').val().length === 0) {
+            $('#password').addClass('invalid');
+            $('<p class="validation-error">' + errMsg + '</p>').insertAfter('#password');
+            error = true;
+        }
+
+        if (error) {
+            return false;
+        }
+
+        return true;
+    }
+</script>

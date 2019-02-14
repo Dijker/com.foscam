@@ -1,0 +1,31 @@
+{
+    "error": {
+        "access_denied": "You do not have sufficient rights to manage this camera.",
+        "connection_refused": "Connection is refused.",
+        "insert_valid_value": "Please enter a valid value.",
+        "missing_settings": "Not all settings of the app have been completed.",
+        "unknown_error": "An unknown error occured.",
+        "username_password_invalid": "Username or password is invalid."
+    },
+    "from": "From",
+    "hostname": "Hostname / IP address",
+    "pair": {
+        "intro": "Enter the network- and login details of the camera here.<br /><strong>Please note:</strong> The account must have 'admin' rights.",
+        "connect": "Connect",
+        "successfull": "Your camera has been successfully connected!",
+        "title": "Add device"
+    },
+    "password": "Password",
+    "port": "Port",
+    "recipient": "Recipient",
+    "save": "Save",
+    "sendAs": "Send snapshot",
+    "settings": {
+        "title": "SMTP configuration",
+        "intro": "Manage your SMTP settings, which will be used to email the snapshot.",
+        "attachment": "Attached to the email",
+        "inline": "As an inline image in the email",
+        "saved": "Settings are saved successfully!"
+    },
+    "username": "Username"
+}

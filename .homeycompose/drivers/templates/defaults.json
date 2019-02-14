@@ -1,0 +1,142 @@
+{
+    "images": {
+        "large": "{{driverPath}}/assets/images/large.png",
+        "small": "{{driverPath}}/assets/images/small.png"
+    },
+    "icon": "{{driverPath}}/assets/icon.svg",
+    "capabilities": [
+        "brightness",
+        "contrast",
+        "flip",
+        "hue",
+        "mirror",
+        "saturation",
+        "sharpness"
+    ],
+    "class": "other",
+    "pair": [
+        {
+            "id": "start",
+            "$template": "start"
+        }
+    ],
+    "$flow": {
+        "actions": [
+            { "$extends": "reboot" },
+            { "$extends": "brightness" },
+            { "$extends": "contrast" },
+            { "$extends": "flip" },
+            { "$extends": "hue" },
+            { "$extends": "mirror" },
+            { "$extends": "saturation" },
+            { "$extends": "sharpness" },
+            { "$extends": "snapshot" }
+        ],
+        "triggers": [
+            { "$extends": "snapshot" }
+        ]
+    },
+     "settings": [
+        {
+            "type": "group",
+            "label": {
+                "en": "Network information",
+                "nl": "Netwerk informatie"
+            },
+            "children": [
+                {
+                    "id": "host",
+                    "type": "text",
+                    "label": {
+                        "en": "Hostname / IP address",
+                        "nl": "Hostnaam / IP adres"
+                    },
+                    "value": "unknown"
+                },
+                {
+                    "id": "port",
+                    "type": "number",
+                    "label": {
+                        "en": "Port",
+                        "nl": "Poort"
+                    },
+                    "value": 1,
+                    "min": 1,
+                    "max": 65533
+                },
+                {
+                    "id": "username",
+                    "type": "text",
+                    "label": {
+                        "en": "Username",
+                        "nl": "Gebruikersnaam"
+                    },
+                    "value": "unknown"
+                },
+                {
+                    "id": "password",
+                    "type": "password",
+                    "label": {
+                        "en": "Password",
+                        "nl": "Wachtwoord"
+                    },
+                    "value": "unknown"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "label": {
+                "en": "Camera information",
+                "nl": "Camera informatie"
+            },
+            "children": [
+                {
+                    "id": "product_name",
+                    "type": "label",
+                    "label": {
+                        "en": "Model",
+                        "nl": "Type"
+                    },
+                    "value": "unknown"
+                },
+                {
+                    "id": "serial_number",
+                    "type": "label",
+                    "label": {
+                        "en": "Serial number",
+                        "nl": "Serienummer"
+                    },
+                    "value": "unknown"
+                },
+                {
+                    "id": "mac",
+                    "type": "label",
+                    "label": {
+                        "en": "MAC",
+                        "nl": "MAC"
+                    },
+                    "value": "AA:BB:CC:DD:EE:FF"
+                },
+                {
+                    "id": "firmware_version",
+                    "type": "label",
+                    "label": {
+                        "en": "Firmware version",
+                        "nl": "Firmware versie"
+                    },
+                    "value": "unknown"
+                },
+                {
+                    "id": "hardware_version",
+                    "type": "label",
+                    "label": {
+                        "en": "Hardware version",
+                        "nl": "Hardware versie"
+                    },
+                    "value": "unknown"
+                }
+            ]
+        }
+    ]
+}

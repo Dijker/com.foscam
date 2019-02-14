@@ -1,0 +1,1884 @@
+{
+    "id": "com.foscam",
+    "version": "1.0.0",
+    "compatibility": ">=2.0.0",
+    "sdk": 2,
+    "brandColor": "#EC0928",
+    "name": {
+        "en": "Foscam",
+        "nl": "Foscam"
+    },
+    "description": {
+        "en": "Adds support for Foscam IPCameras.",
+        "nl": "Voegt ondersteuning toe voor Foscam IPCamera's."
+    },
+    "category": [
+        "security"
+    ],
+    "tags": {
+        "en": [
+            "foscam",
+            "ipcam",
+            "camera",
+            "webcam",
+            "home",
+            "kantoor",
+            "security"
+        ],
+        "nl": [
+            "foscam",
+            "ipcam",
+            "camera",
+            "webcam",
+            "thuis",
+            "office",
+            "beveliging"
+        ]
+    },
+    "permissions": [],
+    "images": {
+        "large": "/assets/images/large.png",
+        "small": "/assets/images/small.png"
+    },
+    "author": {
+        "name": "Edwin van de Pol",
+        "email": "github@edwinvandepol.nl"
+    },
+    "contributors": {
+        "developers": [
+            {
+                "name": "Edwin van de Pol",
+                "email": "github@edwinvandepol.nl"
+            }
+        ]
+    },
+    "flow": {
+        "triggers": [
+            {
+                "id": "snapshot",
+                "title": {
+                    "en": "Snapshot is gemaakt"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=bullet"
+                    }
+                ]
+            },
+            {
+                "id": "snapshot",
+                "title": {
+                    "en": "Snapshot is gemaakt"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=cube"
+                    }
+                ]
+            },
+            {
+                "id": "snapshot",
+                "title": {
+                    "en": "Snapshot is gemaakt"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=dome"
+                    }
+                ]
+            },
+            {
+                "id": "snapshot",
+                "title": {
+                    "en": "Snapshot is gemaakt"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=pt"
+                    }
+                ]
+            },
+            {
+                "id": "snapshot",
+                "title": {
+                    "en": "Snapshot is gemaakt"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=ptz"
+                    }
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "id": "reboot",
+                "title": {
+                    "en": "Reboot",
+                    "nl": "Opnieuw opstarten"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=bullet"
+                    }
+                ]
+            },
+            {
+                "id": "brightness",
+                "title": {
+                    "en": "Set the brightness",
+                    "nl": "Zet de helderheid"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=bullet"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "contrast",
+                "title": {
+                    "en": "Set the contrast",
+                    "nl": "Zet het contrast"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=bullet"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "flip",
+                "title": {
+                    "en": "Set flip view",
+                    "nl": "Zet flip beeld"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=bullet"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "1",
+                                "title": {
+                                    "en": "On",
+                                    "nl": "Aan"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "title": {
+                                    "en": "Off",
+                                    "nl": "Uit"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "hue",
+                "title": {
+                    "en": "Set the hue",
+                    "nl": "Zet de hue"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=bullet"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "mirror",
+                "title": {
+                    "en": "Set mirror view",
+                    "nl": "Zet spiegelbeeld"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=bullet"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "1",
+                                "title": {
+                                    "en": "On",
+                                    "nl": "Aan"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "title": {
+                                    "en": "Off",
+                                    "nl": "Uit"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "saturation",
+                "title": {
+                    "en": "Set the saturation",
+                    "nl": "Zet de verzadiging"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=bullet"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "sharpness",
+                "title": {
+                    "en": "Set the sharpness",
+                    "nl": "Zet de scherpte"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=bullet"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "snapshot",
+                "title": {
+                    "en": "Take a snapshot",
+                    "nl": "Maak een snapshot"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=bullet"
+                    }
+                ]
+            },
+            {
+                "id": "reboot",
+                "title": {
+                    "en": "Reboot",
+                    "nl": "Opnieuw opstarten"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=cube"
+                    }
+                ]
+            },
+            {
+                "id": "brightness",
+                "title": {
+                    "en": "Set the brightness",
+                    "nl": "Zet de helderheid"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=cube"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "contrast",
+                "title": {
+                    "en": "Set the contrast",
+                    "nl": "Zet het contrast"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=cube"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "flip",
+                "title": {
+                    "en": "Set flip view",
+                    "nl": "Zet flip beeld"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=cube"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "1",
+                                "title": {
+                                    "en": "On",
+                                    "nl": "Aan"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "title": {
+                                    "en": "Off",
+                                    "nl": "Uit"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "hue",
+                "title": {
+                    "en": "Set the hue",
+                    "nl": "Zet de hue"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=cube"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "mirror",
+                "title": {
+                    "en": "Set mirror view",
+                    "nl": "Zet spiegelbeeld"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=cube"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "1",
+                                "title": {
+                                    "en": "On",
+                                    "nl": "Aan"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "title": {
+                                    "en": "Off",
+                                    "nl": "Uit"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "saturation",
+                "title": {
+                    "en": "Set the saturation",
+                    "nl": "Zet de verzadiging"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=cube"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "sharpness",
+                "title": {
+                    "en": "Set the sharpness",
+                    "nl": "Zet de scherpte"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=cube"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "snapshot",
+                "title": {
+                    "en": "Take a snapshot",
+                    "nl": "Maak een snapshot"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=cube"
+                    }
+                ]
+            },
+            {
+                "id": "reboot",
+                "title": {
+                    "en": "Reboot",
+                    "nl": "Opnieuw opstarten"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=dome"
+                    }
+                ]
+            },
+            {
+                "id": "brightness",
+                "title": {
+                    "en": "Set the brightness",
+                    "nl": "Zet de helderheid"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=dome"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "contrast",
+                "title": {
+                    "en": "Set the contrast",
+                    "nl": "Zet het contrast"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=dome"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "flip",
+                "title": {
+                    "en": "Set flip view",
+                    "nl": "Zet flip beeld"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=dome"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "1",
+                                "title": {
+                                    "en": "On",
+                                    "nl": "Aan"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "title": {
+                                    "en": "Off",
+                                    "nl": "Uit"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "hue",
+                "title": {
+                    "en": "Set the hue",
+                    "nl": "Zet de hue"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=dome"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "mirror",
+                "title": {
+                    "en": "Set mirror view",
+                    "nl": "Zet spiegelbeeld"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=dome"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "1",
+                                "title": {
+                                    "en": "On",
+                                    "nl": "Aan"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "title": {
+                                    "en": "Off",
+                                    "nl": "Uit"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "saturation",
+                "title": {
+                    "en": "Set the saturation",
+                    "nl": "Zet de verzadiging"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=dome"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "sharpness",
+                "title": {
+                    "en": "Set the sharpness",
+                    "nl": "Zet de scherpte"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=dome"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "snapshot",
+                "title": {
+                    "en": "Take a snapshot",
+                    "nl": "Maak een snapshot"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=dome"
+                    }
+                ]
+            },
+            {
+                "id": "reboot",
+                "title": {
+                    "en": "Reboot",
+                    "nl": "Opnieuw opstarten"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=pt"
+                    }
+                ]
+            },
+            {
+                "id": "brightness",
+                "title": {
+                    "en": "Set the brightness",
+                    "nl": "Zet de helderheid"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=pt"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "contrast",
+                "title": {
+                    "en": "Set the contrast",
+                    "nl": "Zet het contrast"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=pt"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "flip",
+                "title": {
+                    "en": "Set flip view",
+                    "nl": "Zet flip beeld"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=pt"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "1",
+                                "title": {
+                                    "en": "On",
+                                    "nl": "Aan"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "title": {
+                                    "en": "Off",
+                                    "nl": "Uit"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "hue",
+                "title": {
+                    "en": "Set the hue",
+                    "nl": "Zet de hue"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=pt"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "mirror",
+                "title": {
+                    "en": "Set mirror view",
+                    "nl": "Zet spiegelbeeld"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=pt"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "1",
+                                "title": {
+                                    "en": "On",
+                                    "nl": "Aan"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "title": {
+                                    "en": "Off",
+                                    "nl": "Uit"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "saturation",
+                "title": {
+                    "en": "Set the saturation",
+                    "nl": "Zet de verzadiging"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=pt"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "sharpness",
+                "title": {
+                    "en": "Set the sharpness",
+                    "nl": "Zet de scherpte"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=pt"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "snapshot",
+                "title": {
+                    "en": "Take a snapshot",
+                    "nl": "Maak een snapshot"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=pt"
+                    }
+                ]
+            },
+            {
+                "id": "reboot",
+                "title": {
+                    "en": "Reboot",
+                    "nl": "Opnieuw opstarten"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=ptz"
+                    }
+                ]
+            },
+            {
+                "id": "brightness",
+                "title": {
+                    "en": "Set the brightness",
+                    "nl": "Zet de helderheid"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=ptz"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "contrast",
+                "title": {
+                    "en": "Set the contrast",
+                    "nl": "Zet het contrast"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=ptz"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "flip",
+                "title": {
+                    "en": "Set flip view",
+                    "nl": "Zet flip beeld"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=ptz"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "1",
+                                "title": {
+                                    "en": "On",
+                                    "nl": "Aan"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "title": {
+                                    "en": "Off",
+                                    "nl": "Uit"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "hue",
+                "title": {
+                    "en": "Set the hue",
+                    "nl": "Zet de hue"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=ptz"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "mirror",
+                "title": {
+                    "en": "Set mirror view",
+                    "nl": "Zet spiegelbeeld"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=ptz"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "1",
+                                "title": {
+                                    "en": "On",
+                                    "nl": "Aan"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "title": {
+                                    "en": "Off",
+                                    "nl": "Uit"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "saturation",
+                "title": {
+                    "en": "Set the saturation",
+                    "nl": "Zet de verzadiging"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=ptz"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "sharpness",
+                "title": {
+                    "en": "Set the sharpness",
+                    "nl": "Zet de scherpte"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=ptz"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                ]
+            },
+            {
+                "id": "snapshot",
+                "title": {
+                    "en": "Take a snapshot",
+                    "nl": "Maak een snapshot"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=ptz"
+                    }
+                ]
+            }
+        ]
+    },
+    "drivers": [
+        {
+            "images": {
+                "large": "/drivers/bullet/assets/images/large.png",
+                "small": "/drivers/bullet/assets/images/small.png"
+            },
+            "icon": "/drivers/bullet/assets/icon.svg",
+            "capabilities": [
+                "brightness",
+                "contrast",
+                "flip",
+                "hue",
+                "mirror",
+                "saturation",
+                "sharpness"
+            ],
+            "class": "other",
+            "pair": [
+                {
+                    "id": "start"
+                }
+            ],
+            "settings": [
+                {
+                    "type": "group",
+                    "label": {
+                        "en": "Network information",
+                        "nl": "Netwerk informatie"
+                    },
+                    "children": [
+                        {
+                            "id": "host",
+                            "type": "text",
+                            "label": {
+                                "en": "Hostname / IP address",
+                                "nl": "Hostnaam / IP adres"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "port",
+                            "type": "number",
+                            "label": {
+                                "en": "Port",
+                                "nl": "Poort"
+                            },
+                            "value": 1,
+                            "min": 1,
+                            "max": 65533
+                        },
+                        {
+                            "id": "username",
+                            "type": "text",
+                            "label": {
+                                "en": "Username",
+                                "nl": "Gebruikersnaam"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "password",
+                            "type": "password",
+                            "label": {
+                                "en": "Password",
+                                "nl": "Wachtwoord"
+                            },
+                            "value": "unknown"
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "label": {
+                        "en": "Camera information",
+                        "nl": "Camera informatie"
+                    },
+                    "children": [
+                        {
+                            "id": "product_name",
+                            "type": "label",
+                            "label": {
+                                "en": "Model",
+                                "nl": "Type"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "serial_number",
+                            "type": "label",
+                            "label": {
+                                "en": "Serial number",
+                                "nl": "Serienummer"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "mac",
+                            "type": "label",
+                            "label": {
+                                "en": "MAC",
+                                "nl": "MAC"
+                            },
+                            "value": "AA:BB:CC:DD:EE:FF"
+                        },
+                        {
+                            "id": "firmware_version",
+                            "type": "label",
+                            "label": {
+                                "en": "Firmware version",
+                                "nl": "Firmware versie"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "hardware_version",
+                            "type": "label",
+                            "label": {
+                                "en": "Hardware version",
+                                "nl": "Hardware versie"
+                            },
+                            "value": "unknown"
+                        }
+                    ]
+                }
+            ],
+            "id": "bullet",
+            "name": {
+                "en": "Bullet Camera",
+                "nl": "Bullet Camera"
+            }
+        },
+        {
+            "images": {
+                "large": "/drivers/cube/assets/images/large.png",
+                "small": "/drivers/cube/assets/images/small.png"
+            },
+            "icon": "/drivers/cube/assets/icon.svg",
+            "capabilities": [
+                "brightness",
+                "contrast",
+                "flip",
+                "hue",
+                "mirror",
+                "saturation",
+                "sharpness"
+            ],
+            "class": "other",
+            "pair": [
+                {
+                    "id": "start"
+                }
+            ],
+            "settings": [
+                {
+                    "type": "group",
+                    "label": {
+                        "en": "Network information",
+                        "nl": "Netwerk informatie"
+                    },
+                    "children": [
+                        {
+                            "id": "host",
+                            "type": "text",
+                            "label": {
+                                "en": "Hostname / IP address",
+                                "nl": "Hostnaam / IP adres"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "port",
+                            "type": "number",
+                            "label": {
+                                "en": "Port",
+                                "nl": "Poort"
+                            },
+                            "value": 1,
+                            "min": 1,
+                            "max": 65533
+                        },
+                        {
+                            "id": "username",
+                            "type": "text",
+                            "label": {
+                                "en": "Username",
+                                "nl": "Gebruikersnaam"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "password",
+                            "type": "password",
+                            "label": {
+                                "en": "Password",
+                                "nl": "Wachtwoord"
+                            },
+                            "value": "unknown"
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "label": {
+                        "en": "Camera information",
+                        "nl": "Camera informatie"
+                    },
+                    "children": [
+                        {
+                            "id": "product_name",
+                            "type": "label",
+                            "label": {
+                                "en": "Model",
+                                "nl": "Type"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "serial_number",
+                            "type": "label",
+                            "label": {
+                                "en": "Serial number",
+                                "nl": "Serienummer"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "mac",
+                            "type": "label",
+                            "label": {
+                                "en": "MAC",
+                                "nl": "MAC"
+                            },
+                            "value": "AA:BB:CC:DD:EE:FF"
+                        },
+                        {
+                            "id": "firmware_version",
+                            "type": "label",
+                            "label": {
+                                "en": "Firmware version",
+                                "nl": "Firmware versie"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "hardware_version",
+                            "type": "label",
+                            "label": {
+                                "en": "Hardware version",
+                                "nl": "Hardware versie"
+                            },
+                            "value": "unknown"
+                        }
+                    ]
+                }
+            ],
+            "id": "cube",
+            "name": {
+                "en": "Cube Camera",
+                "nl": "Cube Camera"
+            }
+        },
+        {
+            "images": {
+                "large": "/drivers/dome/assets/images/large.png",
+                "small": "/drivers/dome/assets/images/small.png"
+            },
+            "icon": "/drivers/dome/assets/icon.svg",
+            "capabilities": [
+                "brightness",
+                "contrast",
+                "flip",
+                "hue",
+                "mirror",
+                "saturation",
+                "sharpness"
+            ],
+            "class": "other",
+            "pair": [
+                {
+                    "id": "start"
+                }
+            ],
+            "settings": [
+                {
+                    "type": "group",
+                    "label": {
+                        "en": "Network information",
+                        "nl": "Netwerk informatie"
+                    },
+                    "children": [
+                        {
+                            "id": "host",
+                            "type": "text",
+                            "label": {
+                                "en": "Hostname / IP address",
+                                "nl": "Hostnaam / IP adres"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "port",
+                            "type": "number",
+                            "label": {
+                                "en": "Port",
+                                "nl": "Poort"
+                            },
+                            "value": 1,
+                            "min": 1,
+                            "max": 65533
+                        },
+                        {
+                            "id": "username",
+                            "type": "text",
+                            "label": {
+                                "en": "Username",
+                                "nl": "Gebruikersnaam"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "password",
+                            "type": "password",
+                            "label": {
+                                "en": "Password",
+                                "nl": "Wachtwoord"
+                            },
+                            "value": "unknown"
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "label": {
+                        "en": "Camera information",
+                        "nl": "Camera informatie"
+                    },
+                    "children": [
+                        {
+                            "id": "product_name",
+                            "type": "label",
+                            "label": {
+                                "en": "Model",
+                                "nl": "Type"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "serial_number",
+                            "type": "label",
+                            "label": {
+                                "en": "Serial number",
+                                "nl": "Serienummer"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "mac",
+                            "type": "label",
+                            "label": {
+                                "en": "MAC",
+                                "nl": "MAC"
+                            },
+                            "value": "AA:BB:CC:DD:EE:FF"
+                        },
+                        {
+                            "id": "firmware_version",
+                            "type": "label",
+                            "label": {
+                                "en": "Firmware version",
+                                "nl": "Firmware versie"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "hardware_version",
+                            "type": "label",
+                            "label": {
+                                "en": "Hardware version",
+                                "nl": "Hardware versie"
+                            },
+                            "value": "unknown"
+                        }
+                    ]
+                }
+            ],
+            "id": "dome",
+            "name": {
+                "en": "Dome Camera",
+                "nl": "Dome Camera"
+            }
+        },
+        {
+            "images": {
+                "large": "/drivers/pt/assets/images/large.png",
+                "small": "/drivers/pt/assets/images/small.png"
+            },
+            "icon": "/drivers/pt/assets/icon.svg",
+            "capabilities": [
+                "brightness",
+                "contrast",
+                "flip",
+                "hue",
+                "mirror",
+                "saturation",
+                "sharpness"
+            ],
+            "class": "other",
+            "pair": [
+                {
+                    "id": "start"
+                }
+            ],
+            "settings": [
+                {
+                    "type": "group",
+                    "label": {
+                        "en": "Network information",
+                        "nl": "Netwerk informatie"
+                    },
+                    "children": [
+                        {
+                            "id": "host",
+                            "type": "text",
+                            "label": {
+                                "en": "Hostname / IP address",
+                                "nl": "Hostnaam / IP adres"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "port",
+                            "type": "number",
+                            "label": {
+                                "en": "Port",
+                                "nl": "Poort"
+                            },
+                            "value": 1,
+                            "min": 1,
+                            "max": 65533
+                        },
+                        {
+                            "id": "username",
+                            "type": "text",
+                            "label": {
+                                "en": "Username",
+                                "nl": "Gebruikersnaam"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "password",
+                            "type": "password",
+                            "label": {
+                                "en": "Password",
+                                "nl": "Wachtwoord"
+                            },
+                            "value": "unknown"
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "label": {
+                        "en": "Camera information",
+                        "nl": "Camera informatie"
+                    },
+                    "children": [
+                        {
+                            "id": "product_name",
+                            "type": "label",
+                            "label": {
+                                "en": "Model",
+                                "nl": "Type"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "serial_number",
+                            "type": "label",
+                            "label": {
+                                "en": "Serial number",
+                                "nl": "Serienummer"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "mac",
+                            "type": "label",
+                            "label": {
+                                "en": "MAC",
+                                "nl": "MAC"
+                            },
+                            "value": "AA:BB:CC:DD:EE:FF"
+                        },
+                        {
+                            "id": "firmware_version",
+                            "type": "label",
+                            "label": {
+                                "en": "Firmware version",
+                                "nl": "Firmware versie"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "hardware_version",
+                            "type": "label",
+                            "label": {
+                                "en": "Hardware version",
+                                "nl": "Hardware versie"
+                            },
+                            "value": "unknown"
+                        }
+                    ]
+                }
+            ],
+            "id": "pt",
+            "name": {
+                "en": "PT Camera",
+                "nl": "PT Camera"
+            }
+        },
+        {
+            "images": {
+                "large": "/drivers/ptz/assets/images/large.png",
+                "small": "/drivers/ptz/assets/images/small.png"
+            },
+            "icon": "/drivers/ptz/assets/icon.svg",
+            "capabilities": [
+                "brightness",
+                "contrast",
+                "flip",
+                "hue",
+                "mirror",
+                "saturation",
+                "sharpness"
+            ],
+            "class": "other",
+            "pair": [
+                {
+                    "id": "start"
+                }
+            ],
+            "settings": [
+                {
+                    "type": "group",
+                    "label": {
+                        "en": "Network information",
+                        "nl": "Netwerk informatie"
+                    },
+                    "children": [
+                        {
+                            "id": "host",
+                            "type": "text",
+                            "label": {
+                                "en": "Hostname / IP address",
+                                "nl": "Hostnaam / IP adres"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "port",
+                            "type": "number",
+                            "label": {
+                                "en": "Port",
+                                "nl": "Poort"
+                            },
+                            "value": 1,
+                            "min": 1,
+                            "max": 65533
+                        },
+                        {
+                            "id": "username",
+                            "type": "text",
+                            "label": {
+                                "en": "Username",
+                                "nl": "Gebruikersnaam"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "password",
+                            "type": "password",
+                            "label": {
+                                "en": "Password",
+                                "nl": "Wachtwoord"
+                            },
+                            "value": "unknown"
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "label": {
+                        "en": "Camera information",
+                        "nl": "Camera informatie"
+                    },
+                    "children": [
+                        {
+                            "id": "product_name",
+                            "type": "label",
+                            "label": {
+                                "en": "Model",
+                                "nl": "Type"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "serial_number",
+                            "type": "label",
+                            "label": {
+                                "en": "Serial number",
+                                "nl": "Serienummer"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "mac",
+                            "type": "label",
+                            "label": {
+                                "en": "MAC",
+                                "nl": "MAC"
+                            },
+                            "value": "AA:BB:CC:DD:EE:FF"
+                        },
+                        {
+                            "id": "firmware_version",
+                            "type": "label",
+                            "label": {
+                                "en": "Firmware version",
+                                "nl": "Firmware versie"
+                            },
+                            "value": "unknown"
+                        },
+                        {
+                            "id": "hardware_version",
+                            "type": "label",
+                            "label": {
+                                "en": "Hardware version",
+                                "nl": "Hardware versie"
+                            },
+                            "value": "unknown"
+                        }
+                    ]
+                }
+            ],
+            "id": "ptz",
+            "name": {
+                "en": "PTZ Camera",
+                "nl": "PTZ Camera"
+            }
+        }
+    ],
+    "capabilities": {
+        "brightness": {
+            "type": "number",
+            "title": {
+                "en": "Brightness",
+                "nl": "Helderheid"
+            },
+            "uiComponent": "slider",
+            "getable": true,
+            "setable": true,
+            "min": 0,
+            "max": 100,
+            "step": 1
+        },
+        "contrast": {
+            "type": "number",
+            "title": {
+                "en": "Contrast",
+                "nl": "Contrast"
+            },
+            "uiComponent": "slider",
+            "getable": true,
+            "setable": true,
+            "min": 0,
+            "max": 100,
+            "step": 1
+        },
+        "flip": {
+            "type": "boolean",
+            "title": {
+                "en": "Flip view",
+                "nl": "Flip beeld"
+            },
+            "getable": true,
+            "setable": true,
+            "uiComponent": "toggle",
+            "insights": true,
+            "insightsTitleTrue": {
+                "en": "Flip beeld aan"
+            },
+            "insightsTitleFalse": {
+                "en": "Flip beeld uit"
+            }
+        },
+        "hue": {
+            "type": "number",
+            "title": {
+                "en": "Hue",
+                "nl": "Hue"
+            },
+            "uiComponent": "slider",
+            "getable": true,
+            "setable": true,
+            "min": 0,
+            "max": 100,
+            "step": 1
+        },
+        "mirror": {
+            "type": "boolean",
+            "title": {
+                "en": "Mirror view",
+                "nl": "Spiegelbeeld"
+            },
+            "getable": true,
+            "setable": true,
+            "uiComponent": "toggle",
+            "insights": true,
+            "insightsTitleTrue": {
+                "en": "Spiegelbeeld aan"
+            },
+            "insightsTitleFalse": {
+                "en": "Spiegelbeeld uit"
+            }
+        },
+        "saturation": {
+            "type": "number",
+            "title": {
+                "en": "Saturation",
+                "nl": "Verzadiging"
+            },
+            "uiComponent": "slider",
+            "getable": true,
+            "setable": true,
+            "min": 0,
+            "max": 100,
+            "step": 1
+        },
+        "sharpness": {
+            "type": "number",
+            "title": {
+                "en": "Sharpness",
+                "nl": "Scherpte"
+            },
+            "uiComponent": "slider",
+            "getable": true,
+            "setable": true,
+            "min": 0,
+            "max": 100,
+            "step": 1
+        }
+    }
+}

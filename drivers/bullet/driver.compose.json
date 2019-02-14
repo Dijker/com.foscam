@@ -1,0 +1,10 @@
+{
+    "id": "BulletCamera",
+    "name": {
+        "en": "Bullet Camera",
+        "nl": "Bullet Camera"
+    },
+    "$extends": [
+        "defaults"
+    ]
+}
