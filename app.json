@@ -52,6 +52,13 @@
             }
         ]
     },
+    "contributing": {
+        "donate": {
+            "paypal": {
+                "username": "evdpol"
+            }
+        }
+    },
     "flow": {
         "triggers": [
             {

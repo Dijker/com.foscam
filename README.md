@@ -35,4 +35,14 @@ Homey will automatically fetch the camera settings every 5 minutes.
 
 ## Support / feedback
 If you have any questions or feedback, please contact me on [Slack](https://athomcommunity.slack.com/team/evdpol).
+
 Please report issues and feature requests at the [issues section](https://github.com/edwinvdpol/com.foscam/issues) on Github.
+
+## Work in progress
+* More extensive logging for offering better support
+* Log viewer in app settings
+
+## Changelog
+
+### v1.0.1
+* Added Paypal account
