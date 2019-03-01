@@ -7,76 +7,79 @@
 
 <p data-i18n="pair.intro"></p>
 
-<div id="form">
-    <div class="form-control">
-        <label data-i18n="hostname"></label>
-        <input id="host" type="text" placeholder="192.168.1.1" value="" />
-    </div>
+<fieldset>
+    <legend data-i18n="hostname"></legend>
+    <input id="host" type="text" placeholder="192.168.1.1" value="" />
+</fieldset>
 
-    <div class="form-control">
-        <label data-i18n="port"></label>
-        <input id="port" type="text" pattern="\d*" placeholder="88" value="" />
-    </div>
+<fieldset>
+    <legend data-i18n="port"></legend>
+    <input id="port" type="number" placeholder="88" value="" />
+</fieldset>
 
-    <div class="form-control">
-        <label data-i18n="username"></label>
-        <input id="username" type="text" placeholder="admin" value="" />
-    </div>
+<fieldset>
+    <legend data-i18n="username"></legend>
+    <input id="username" type="text" placeholder="admin" value="" />
+</fieldset>
 
-    <div class="form-control">
-        <label data-i18n="password"></label>
-        <input id="password" type="password" value="" />
-    </div>
+<fieldset>
+    <legend data-i18n="password"></legend>
+    <input id="password" type="password" value="" />
+</fieldset>
 
-    <div class="form-control">
-        <button id="connect" class="button-primary" data-i18n="pair.connect"></button>
-    </div>
-</div>
+<button id="connect" class="btn btn-green" data-i18n="pair.connect"></button>
 
 <script type="text/javascript">
-    $('link[href$="homey.css"]').remove();
+
+    $('input').focus(function () {
+        $('#connect').html(__('pair.connect')).removeAttr('disabled');
+        $(this).parent().removeClass('invalid');
+    });
 
     $('#connect').on('click', function (e) {
 
+        var $this = $(this);
+
+        $this.html(__('loading-spinner')).prop('disabled', 'disabled');
+
         if (!validateForm()) {
+            $this.html(__('pair.connect')).removeAttr('disabled');
             return false;
         }
 
-        Homey.showLoadingOverlay();
-
         var settings = {
-            host     : $('#host').val(),
-            port     : Number($('#port').val()),
-            username : $('#username').val(),
-            password : $('#password').val()
+            host: $('#host').val(),
+            port: Number($('#port').val()),
+            username: $('#username').val(),
+            password: $('#password').val()
         };
 
-        Homey.emit('addDevice', settings, function (err, res) {
+        Homey.emit('addDevice', settings, (err, result) => {
             if (err) {
-                Homey.hideLoadingOverlay();
                 Homey.alert(err.message, 'error');
+                $this.html(__('pair.connect')).removeAttr('disabled');
                 return false;
             }
 
-            settings.product_name = res.productName;
-            settings.serial_number = res.serialNo;
-            settings.mac = res.mac.toString(16).match(/.{1,2}/g).reverse().join(':');
-            settings.firmware_version = res.firmwareVer;
-            settings.hardware_version = res.hardwareVer;
+            settings.product_name = result.productName;
+            settings.mac = result.mac.toString(16).match(/.{1,2}/g).reverse().join(':');
+            settings.firmware_version = result.firmwareVer;
+            settings.hardware_version = result.hardwareVer;
 
             var device = {
-                name: res.devName,
+                name: result.devName,
                 data: {
-                    id: res.mac
+                    id: result.mac
                 },
                 settings: settings
             };
 
-            Homey.addDevice(device, function (err, result) {
+            Homey.createDevice(device, (err, result) => {
                 if (err) {
-                    Homey.hideLoadingOverlay();
                     Homey.alert(err, 'error');
+                    $this.html(__('pair.connect')).removeAttr('disabled');
                 } else {
+                    $this.html(__('pair.connected')).prop('disabled', 'disabled');
                     Homey.alert(__('pair.successfull'), 'info');
                     Homey.done();
                 }
@@ -88,32 +91,26 @@
     function validateForm () {
 
         let error = false;
-        let errMsg = Homey.__('error.insert_valid_value');
 
-        $('.validation-error').remove();
         $('.invalid').removeClass('invalid');
 
         if ($('#host').val().length === 0) {
-            $('#host').addClass('invalid');
-            $('<p class="validation-error">' + errMsg + '</p>').insertAfter('#host');
+            $('#host').parent().addClass('invalid');
             error = true;
         }
 
         if ($('#port').val().length === 0) {
-            $('#port').addClass('invalid');
-            $('<p class="validation-error">' + errMsg + '</p>').insertAfter('#port');
+            $('#port').parent().addClass('invalid');
             error = true;
         }
 
         if ($('#username').val().length === 0) {
-            $('#username').addClass('invalid');
-            $('<p class="validation-error">' + errMsg + '</p>').insertAfter('#username');
+            $('#username').parent().addClass('invalid');
             error = true;
         }
 
         if ($('#password').val().length === 0) {
-            $('#password').addClass('invalid');
-            $('<p class="validation-error">' + errMsg + '</p>').insertAfter('#password');
+            $('#password').parent().addClass('invalid');
             error = true;
         }
 

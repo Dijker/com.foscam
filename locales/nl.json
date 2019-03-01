@@ -1,17 +1,20 @@
 {
     "error": {
         "access_denied": "U heeft niet voldoende rechten om deze camera te beheren.",
-        "connection_refused": "Verbinding is geweigerd.",
-        "insert_valid_value": "Vul een geldige waarde in.",
+        "connection_refused": "Netwerk verbinding is geweigerd.",
+        "duplicate_device": "Deze camera is al toegevoegd aan Homey.",
         "missing_settings": "Niet alle instellingen van de app zijn ingevuld.",
         "unknown_error": "Er is een onbekende fout opgetreden.",
-        "username_password_invalid": "Gebruikersnaam of wachtwoord is ongeldig."
+        "username_password_invalid": "Gebruikersnaam of wachtwoord is ongeldig.",
+        "wrong_type_response": "Ongeldig antwoord van het netwerkapparaat gekregen. Als de netwerkgegevens juist zijn, wordt dit camera model waarschijnlijk niet ondersteund."
     },
     "from": "Afzender",
     "hostname": "Hostnaam / IP adres",
+    "loading-spinner": "<i class=\"fas fa-circle-notch fa-spin\"></i>",
     "pair": {
         "intro": "Geef hier onder de netwerk- en inloggegevens van de camera in.<br /><strong>Let op:</strong> Het account dient over 'admin' rechten te beschikken.",
         "connect": "Verbinden",
+        "connected": "<i class=\"fas fa-check\"></i> Verbonden",
         "successfull": "Uw camera is succesvol gekoppeld!",
         "title": "Apparaat toevoegen"
     },
@@ -19,13 +22,20 @@
     "port": "Poort",
     "recipient": "Ontvanger",
     "save": "Opslaan",
+    "saved": "<i class=\"fas fa-check\"></i> Opgeslagen",
     "sendAs": "Stuur snapshot",
     "settings": {
-        "title": "SMTP configuratie",
-        "intro": "Beheer uw SMTP-instellingen, die gebruikt worden om de snapshot te e-mailen.",
-        "attachment": "Als bijlage bij de e-mail",
-        "inline": "Als afbeelding in de e-mail",
-        "saved": "Instellingen zijn succesvol opslagen!"
+        "tab1": {
+            "title": "SMTP configuratie",
+            "intro": "Beheer uw SMTP-instellingen, die gebruikt worden om de snapshot te e-mailen.",
+            "attachment": "Als bijlage bij de e-mail",
+            "inline": "Als afbeelding in de e-mail"
+        },
+        "tab2": {
+            "title": "Logs",
+            "delete": "Verwijder logs",
+            "warning": "Weet je het echt zeker?"
+        }
     },
     "username": "Gebruikersnaam"
 }

@@ -6,12 +6,27 @@ const Nodemailer = require('nodemailer');
 
 module.exports = [
     {
+        method: 'GET',
+        path: '/logs',
+        fn: function (args, callback) {
+            const result = Homey.app.getLogs();
+            callback(null, result);
+        }
+    },
+    {
+        method: 'GET',
+        path: '/delete_logs',
+        fn: function (args, callback) {
+            const result = Homey.app.deleteLogs();
+            callback(null, result);
+        }
+    },
+    {
         method: 'PUT',
         path: '/verify_email_settings',
         fn: function (args, callback) {
+            async function test () {
 
-            async function test()
-            {
                 let options = {
                     host: args.body.host,
                     port: Number(args.body.port),
@@ -41,7 +56,13 @@ module.exports = [
                 .then( result => {
                     callback(null, result);
                 }).catch( err => {
-                    callback(err);
+                    Homey.app.error('verify_email_settings', err);
+
+                    if (err.responseCode && Number(err.responseCode) === 535) {
+                        callback(Homey.__('error.username_password_invalid'));
+                    }
+
+                    callback(Homey.__('error.connection_refused'));
                 });
         }
     }

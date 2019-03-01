@@ -1,17 +1,20 @@
 {
     "error": {
         "access_denied": "You do not have sufficient rights to manage this camera.",
-        "connection_refused": "Connection is refused.",
-        "insert_valid_value": "Please enter a valid value.",
+        "connection_refused": "Network connection is refused.",
+        "duplicate_device": "This camera is already added to Homey.",
         "missing_settings": "Not all settings of the app have been completed.",
         "unknown_error": "An unknown error occured.",
-        "username_password_invalid": "Username or password is invalid."
+        "username_password_invalid": "Username or password is invalid.",
+        "wrong_type_response": "Got invalid response from the network device. If the network credentials are correct, this camera model is probably not supported."
     },
     "from": "From",
     "hostname": "Hostname / IP address",
+    "loading-spinner": "<i class=\"fas fa-circle-notch fa-spin\"></i>",
     "pair": {
-        "intro": "Enter the network- and login details of the camera here.<br /><strong>Please note:</strong> The account must have 'admin' rights.",
+        "intro": "Enter the network- and login details of the camera here.<br /><strong>Please note:</strong> The account must have 'admin' privileges.",
         "connect": "Connect",
+        "connected": "<i class=\"fas fa-check\"></i> Connected",
         "successfull": "Your camera has been successfully connected!",
         "title": "Add device"
     },
@@ -19,13 +22,20 @@
     "port": "Port",
     "recipient": "Recipient",
     "save": "Save",
+    "saved": "<i class=\"fas fa-check\"></i> Saved",
     "sendAs": "Send snapshot",
     "settings": {
-        "title": "SMTP configuration",
-        "intro": "Manage your SMTP settings, which will be used to email the snapshot.",
-        "attachment": "Attached to the email",
-        "inline": "As an inline image in the email",
-        "saved": "Settings are saved successfully!"
+        "tab1": {
+            "title": "SMTP configuration",
+            "intro": "Manage your SMTP settings, which will be used to email the snapshot.",
+            "attachment": "Attached to the email",
+            "inline": "As an inline image in the email"
+        },
+        "tab2": {
+            "title": "Logs",
+            "delete": "Delete logs",
+            "warning": "Are you really sure?"
+        }
     },
     "username": "Username"
 }

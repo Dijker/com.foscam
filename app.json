@@ -1,6 +1,6 @@
 {
     "id": "com.foscam",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "compatibility": ">=2.0.0",
     "sdk": 2,
     "brandColor": "#EC0928",
@@ -1161,8 +1161,8 @@
                 {
                     "type": "group",
                     "label": {
-                        "en": "Network information",
-                        "nl": "Netwerk informatie"
+                        "en": "Network settings",
+                        "nl": "Netwerk instellingen"
                     },
                     "children": [
                         {
@@ -1181,7 +1181,7 @@
                                 "en": "Port",
                                 "nl": "Poort"
                             },
-                            "value": 1,
+                            "value": 88,
                             "min": 1,
                             "max": 65533
                         },
@@ -1208,8 +1208,8 @@
                 {
                     "type": "group",
                     "label": {
-                        "en": "Camera information",
-                        "nl": "Camera informatie"
+                        "en": "Device information",
+                        "nl": "Apparaat informatie"
                     },
                     "children": [
                         {
@@ -1218,15 +1218,6 @@
                             "label": {
                                 "en": "Model",
                                 "nl": "Type"
-                            },
-                            "value": "unknown"
-                        },
-                        {
-                            "id": "serial_number",
-                            "type": "label",
-                            "label": {
-                                "en": "Serial number",
-                                "nl": "Serienummer"
                             },
                             "value": "unknown"
                         },
@@ -1291,8 +1282,8 @@
                 {
                     "type": "group",
                     "label": {
-                        "en": "Network information",
-                        "nl": "Netwerk informatie"
+                        "en": "Network settings",
+                        "nl": "Netwerk instellingen"
                     },
                     "children": [
                         {
@@ -1311,7 +1302,7 @@
                                 "en": "Port",
                                 "nl": "Poort"
                             },
-                            "value": 1,
+                            "value": 88,
                             "min": 1,
                             "max": 65533
                         },
@@ -1338,8 +1329,8 @@
                 {
                     "type": "group",
                     "label": {
-                        "en": "Camera information",
-                        "nl": "Camera informatie"
+                        "en": "Device information",
+                        "nl": "Apparaat informatie"
                     },
                     "children": [
                         {
@@ -1348,15 +1339,6 @@
                             "label": {
                                 "en": "Model",
                                 "nl": "Type"
-                            },
-                            "value": "unknown"
-                        },
-                        {
-                            "id": "serial_number",
-                            "type": "label",
-                            "label": {
-                                "en": "Serial number",
-                                "nl": "Serienummer"
                             },
                             "value": "unknown"
                         },
@@ -1421,8 +1403,8 @@
                 {
                     "type": "group",
                     "label": {
-                        "en": "Network information",
-                        "nl": "Netwerk informatie"
+                        "en": "Network settings",
+                        "nl": "Netwerk instellingen"
                     },
                     "children": [
                         {
@@ -1441,7 +1423,7 @@
                                 "en": "Port",
                                 "nl": "Poort"
                             },
-                            "value": 1,
+                            "value": 88,
                             "min": 1,
                             "max": 65533
                         },
@@ -1468,8 +1450,8 @@
                 {
                     "type": "group",
                     "label": {
-                        "en": "Camera information",
-                        "nl": "Camera informatie"
+                        "en": "Device information",
+                        "nl": "Apparaat informatie"
                     },
                     "children": [
                         {
@@ -1478,15 +1460,6 @@
                             "label": {
                                 "en": "Model",
                                 "nl": "Type"
-                            },
-                            "value": "unknown"
-                        },
-                        {
-                            "id": "serial_number",
-                            "type": "label",
-                            "label": {
-                                "en": "Serial number",
-                                "nl": "Serienummer"
                             },
                             "value": "unknown"
                         },
@@ -1551,8 +1524,8 @@
                 {
                     "type": "group",
                     "label": {
-                        "en": "Network information",
-                        "nl": "Netwerk informatie"
+                        "en": "Network settings",
+                        "nl": "Netwerk instellingen"
                     },
                     "children": [
                         {
@@ -1571,7 +1544,7 @@
                                 "en": "Port",
                                 "nl": "Poort"
                             },
-                            "value": 1,
+                            "value": 88,
                             "min": 1,
                             "max": 65533
                         },
@@ -1598,8 +1571,8 @@
                 {
                     "type": "group",
                     "label": {
-                        "en": "Camera information",
-                        "nl": "Camera informatie"
+                        "en": "Device information",
+                        "nl": "Apparaat informatie"
                     },
                     "children": [
                         {
@@ -1608,15 +1581,6 @@
                             "label": {
                                 "en": "Model",
                                 "nl": "Type"
-                            },
-                            "value": "unknown"
-                        },
-                        {
-                            "id": "serial_number",
-                            "type": "label",
-                            "label": {
-                                "en": "Serial number",
-                                "nl": "Serienummer"
                             },
                             "value": "unknown"
                         },
@@ -1681,8 +1645,8 @@
                 {
                     "type": "group",
                     "label": {
-                        "en": "Network information",
-                        "nl": "Netwerk informatie"
+                        "en": "Network settings",
+                        "nl": "Netwerk instellingen"
                     },
                     "children": [
                         {
@@ -1701,7 +1665,7 @@
                                 "en": "Port",
                                 "nl": "Poort"
                             },
-                            "value": 1,
+                            "value": 88,
                             "min": 1,
                             "max": 65533
                         },
@@ -1728,8 +1692,8 @@
                 {
                     "type": "group",
                     "label": {
-                        "en": "Camera information",
-                        "nl": "Camera informatie"
+                        "en": "Device information",
+                        "nl": "Apparaat informatie"
                     },
                     "children": [
                         {
@@ -1738,15 +1702,6 @@
                             "label": {
                                 "en": "Model",
                                 "nl": "Type"
-                            },
-                            "value": "unknown"
-                        },
-                        {
-                            "id": "serial_number",
-                            "type": "label",
-                            "label": {
-                                "en": "Serial number",
-                                "nl": "Serienummer"
                             },
                             "value": "unknown"
                         },
