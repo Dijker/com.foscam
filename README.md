@@ -28,6 +28,7 @@ Homey will automatically fetch the camera settings every minute.
 - Set hue of the video
 - Set saturation of the video
 - Set sharpness of the video
+- Set motion detection on/off
 - Flip the video horizontal
 - Goto PTZ preset point [`*`]
 - Mirror the video
