@@ -331,6 +331,40 @@
                 ]
             },
             {
+                "id": "motion_detection_isenabled",
+                "title": {
+                    "en": "Set motion detection",
+                    "nl": "Zet bewegingsdetectie"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=bullet"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "1",
+                                "title": {
+                                    "en": "On",
+                                    "nl": "Aan"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "title": {
+                                    "en": "Off",
+                                    "nl": "Uit"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "id": "saturation",
                 "title": {
                     "en": "Set the saturation",
@@ -569,6 +603,40 @@
                 ]
             },
             {
+                "id": "motion_detection_isenabled",
+                "title": {
+                    "en": "Set motion detection",
+                    "nl": "Zet bewegingsdetectie"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=cube"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "1",
+                                "title": {
+                                    "en": "On",
+                                    "nl": "Aan"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "title": {
+                                    "en": "Off",
+                                    "nl": "Uit"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "id": "saturation",
                 "title": {
                     "en": "Set the saturation",
@@ -807,6 +875,40 @@
                 ]
             },
             {
+                "id": "motion_detection_isenabled",
+                "title": {
+                    "en": "Set motion detection",
+                    "nl": "Zet bewegingsdetectie"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=dome"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "1",
+                                "title": {
+                                    "en": "On",
+                                    "nl": "Aan"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "title": {
+                                    "en": "Off",
+                                    "nl": "Uit"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "id": "saturation",
                 "title": {
                     "en": "Set the saturation",
@@ -1045,6 +1147,40 @@
                 ]
             },
             {
+                "id": "motion_detection_isenabled",
+                "title": {
+                    "en": "Set motion detection",
+                    "nl": "Zet bewegingsdetectie"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=pt"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "1",
+                                "title": {
+                                    "en": "On",
+                                    "nl": "Aan"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "title": {
+                                    "en": "Off",
+                                    "nl": "Uit"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "id": "saturation",
                 "title": {
                     "en": "Set the saturation",
@@ -1253,6 +1389,40 @@
                 "title": {
                     "en": "Set mirror view",
                     "nl": "Zet spiegelbeeld"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=ptz"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "1",
+                                "title": {
+                                    "en": "On",
+                                    "nl": "Aan"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "title": {
+                                    "en": "Off",
+                                    "nl": "Uit"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "motion_detection_isenabled",
+                "title": {
+                    "en": "Set motion detection",
+                    "nl": "Zet bewegingsdetectie"
                 },
                 "args": [
                     {

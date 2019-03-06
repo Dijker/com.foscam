@@ -51,6 +51,7 @@ Please report issues and feature requests at the [issues section](https://github
 
 #### v1.2.0
 - Added motion detection settings (device).
+- Added 'Set motion detection on/off' action flowcard.
 - Added 'Goto PTZ preset point' action flowcard.
 - Added 'Send snapshot' (image) action flowcard.
 - Added 'Snapshot token' to 'snapshot is taken' trigger flowcard.
