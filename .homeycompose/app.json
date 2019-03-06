@@ -1,6 +1,6 @@
 {
     "id": "com.foscam",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "compatibility": ">=2.0.0",
     "sdk": 2,
     "brandColor": "#EC0928",
@@ -21,6 +21,9 @@
             "ipcam",
             "camera",
             "webcam",
+            "email",
+            "image",
+            "snapshot",
             "home",
             "kantoor",
             "security"
@@ -30,6 +33,10 @@
             "ipcam",
             "camera",
             "webcam",
+            "email",
+            "image",
+            "afbeelding",
+            "snapshot",
             "thuis",
             "office",
             "beveliging"
@@ -55,7 +62,7 @@
     "contributing": {
         "donate": {
             "paypal": {
-                "username": "evdpol"
+                "username": "edwinvdpol"
             }
         }
     }

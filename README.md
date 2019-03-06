@@ -17,24 +17,28 @@ This app should support most *newer* types of devices below. I do not know about
 ## Unsupported models
 FI89*xx* [...]
 
-## Supported features
-Homey will automatically fetch the camera settings every 5 minutes.
+## Supported actions
+Homey will automatically fetch the camera settings every minute.
 
 **If you would like to use the email snapshot feature, do not forget to configure the app settings.**
-- Create snapshot and send it via email as attachment or inline
+- Create snapshot image
+- Send snapshot via email as attachment or inline
 - Set brightness of the video
 - Set contrast of the video
 - Set hue of the video
 - Set saturation of the video
 - Set sharpness of the video
 - Flip the video horizontal
+- Goto PTZ preset point [`*`]
 - Mirror the video
 - Reboot the camera
+
+[`*`] Your camera has to support this, please refer to the [user manual](https://foscam.com/downloads/user_mannual.html).
 
 ## Supported triggers
 - When the camera made a snapshot
 
-## Supported Languages
+## Supported languages
 - English
 - Dutch (Nederlands)
 
@@ -45,6 +49,15 @@ Please report issues and feature requests at the [issues section](https://github
 
 ## Changelog
 
+#### v1.2.0
+- Added motion detection settings (device).
+- Added 'Goto PTZ preset point' action flowcard.
+- Added 'Send snapshot' (image) action flowcard.
+- Added 'Snapshot token' to 'snapshot is taken' trigger flowcard.
+- Added 'Send email on snapshot' setting (app).
+- Changed device poll interval from 5 minutes to 1 minute.
+
+
 #### v1.1.0
 - Added check if device is already added when pairing device.
 - Added extensive logging for better support.
@@ -53,6 +66,7 @@ Please report issues and feature requests at the [issues section](https://github
 - Added the name of the camera in the snapshot email subject.
 - Updated custom pairing- and app settings screen (makeover).
 - Removed serial number from device information.
+
 
 #### v1.0.1
 - Added Paypal account.

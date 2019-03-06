@@ -24,6 +24,10 @@ function onHomeyReady (Homey) {
         if (mail_recipient) { $('#recipient').val(mail_recipient); }
     });
 
+    Homey.get('mail_after_snapshot', (err, mail_after_snapshot) => {
+        if (mail_after_snapshot) { $('#mailAfterSnapshot').val(mail_after_snapshot); }
+    });
+
     Homey.get('mail_send_as', (err, mail_send_as) => {
         if (mail_send_as) { $('#sendAs').val(mail_send_as); }
     });
@@ -54,6 +58,7 @@ $(document).on('click', '#save', function (e) {
         username: $('#username').val(),
         password: $('#password').val(),
         recipient: $('#recipient').val(),
+        emailafter: $('#mailAfterSnapshot').val(),
         sendas: $('#sendAs').val()
     };
 
@@ -69,6 +74,7 @@ $(document).on('click', '#save', function (e) {
             Homey.set('mail_password', settings.password);
             Homey.set('mail_from', settings.from);
             Homey.set('mail_recipient', settings.recipient);
+            Homey.set('mail_after_snapshot', settings.emailafter);
             Homey.set('mail_send_as', settings.sendas);
 
             $this.html(__('saved')).prop('disabled', 'disabled');

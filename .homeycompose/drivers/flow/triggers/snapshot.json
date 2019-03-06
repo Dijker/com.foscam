@@ -2,5 +2,15 @@
     "title": {
         "en": "Snapshot is taken",
         "en": "Snapshot is gemaakt"
-    }
+    },
+    "tokens": [
+        {
+            "name": "snapshot_token",
+            "title": {
+                "en": "Snapshot",
+                "nl": "Snapshot"
+            },
+            "type": "image"
+        }
+    ]
 }

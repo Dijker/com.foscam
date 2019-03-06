@@ -1,6 +1,7 @@
 {
     "error": {
         "access_denied": "You do not have sufficient rights to manage this camera.",
+        "configure_smtp_settings": "Please configure your SMTP settings.",
         "connection_refused": "Network connection is refused.",
         "duplicate_device": "This camera is already added to Homey.",
         "missing_settings": "Not all settings of the app have been completed.",
@@ -11,6 +12,7 @@
     "from": "From",
     "hostname": "Hostname / IP address",
     "loading-spinner": "<i class=\"fas fa-circle-notch fa-spin\"></i>",
+    "no": "No",
     "pair": {
         "intro": "Enter the network- and login details of the camera here.<br /><strong>Please note:</strong> The account must have 'admin' privileges.",
         "connect": "Connect",
@@ -29,7 +31,8 @@
             "title": "SMTP configuration",
             "intro": "Manage your SMTP settings, which will be used to email the snapshot.",
             "attachment": "Attached to the email",
-            "inline": "As an inline image in the email"
+            "inline": "As an inline image in the email",
+            "email_after_snapshot": "Send email after snapshot"
         },
         "tab2": {
             "title": "Logs",
@@ -37,5 +40,6 @@
             "warning": "Are you really sure?"
         }
     },
-    "username": "Username"
+    "username": "Username",
+    "yes": "Ja"
 }

@@ -1,6 +1,7 @@
 {
     "error": {
         "access_denied": "U heeft niet voldoende rechten om deze camera te beheren.",
+        "configure_smtp_settings": "Configureer uw SMTP-instellingen.",
         "connection_refused": "Netwerk verbinding is geweigerd.",
         "duplicate_device": "Deze camera is al toegevoegd aan Homey.",
         "missing_settings": "Niet alle instellingen van de app zijn ingevuld.",
@@ -11,6 +12,7 @@
     "from": "Afzender",
     "hostname": "Hostnaam / IP adres",
     "loading-spinner": "<i class=\"fas fa-circle-notch fa-spin\"></i>",
+    "no": "Nee",
     "pair": {
         "intro": "Geef hier onder de netwerk- en inloggegevens van de camera in.<br /><strong>Let op:</strong> Het account dient over 'admin' rechten te beschikken.",
         "connect": "Verbinden",
@@ -29,7 +31,8 @@
             "title": "SMTP configuratie",
             "intro": "Beheer uw SMTP-instellingen, die gebruikt worden om de snapshot te e-mailen.",
             "attachment": "Als bijlage bij de e-mail",
-            "inline": "Als afbeelding in de e-mail"
+            "inline": "Als afbeelding in de e-mail",
+            "email_after_snapshot": "Stuur e-mail na snapshot"
         },
         "tab2": {
             "title": "Logs",
@@ -37,5 +40,6 @@
             "warning": "Weet je het echt zeker?"
         }
     },
-    "username": "Gebruikersnaam"
+    "username": "Gebruikersnaam",
+    "yes": "Ja"
 }

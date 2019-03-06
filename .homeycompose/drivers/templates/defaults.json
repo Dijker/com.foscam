@@ -30,7 +30,9 @@
             { "$extends": "mirror" },
             { "$extends": "saturation" },
             { "$extends": "sharpness" },
-            { "$extends": "snapshot" }
+            { "$extends": "snapshot" },
+            { "$extends": "send_image" },
+            { "$extends": "ptz_goto_preset_point" }
         ],
         "triggers": [
             { "$extends": "snapshot" }
@@ -81,6 +83,91 @@
                         "nl": "Wachtwoord"
                     },
                     "value": "unknown"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "label": {
+                "en": "Motion detection settings",
+                "nl": "Bewegingsdetectie instellingen"
+            },
+            "children": [
+                {
+                    "id": "motion_detect_isenable",
+                    "type": "radio",
+                    "label": "Status",
+                    "value": "1",
+                    "hint": {
+                        "en": "Enable or disable motion dection",
+                        "nl": "Schakel bewegingsdetectie in of uit"
+                    },
+                    "values": [
+                        {
+                            "id": "0",
+                            "label": {
+                                "en": "Disabled",
+                                "nl": "Uitgeschakeld"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "Enabled",
+                                "nl": "Ingeschakeld"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "motion_detect_sensitivity",
+                    "type": "radio",
+                    "label": {
+                        "en": "Sensitivity",
+                        "nl": "Gevoeligheid"
+                    },
+                    "value": "1",
+                    "hint": {
+                        "en": "Set the sensitivity of the motion detection",
+                        "nl": "Stel de gevoeligheid van de bewegingsdetectie in"
+                    },
+                    "values": [
+                        {
+                            "id": "4",
+                            "label": {
+                                "en": "Lowest",
+                                "nl": "Laagste"
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "label": {
+                                "en": "Lower",
+                                "nl": "Lager"
+                            }
+                        },
+                        {
+                            "id": "0",
+                            "label": {
+                                "en": "Low",
+                                "nl": "Laag"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "Normal",
+                                "nl": "Normaal"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "label": {
+                                "en": "High",
+                                "nl": "Hoog"
+                            }
+                        }
+                    ]
                 }
             ]
         },

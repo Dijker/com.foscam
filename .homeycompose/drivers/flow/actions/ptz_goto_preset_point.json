@@ -1,0 +1,16 @@
+{
+    "title": {
+        "en": "Go to preset point",
+        "nl": "Ga naar ingesteld punt"
+    },
+    "args": [
+        {
+            "type": "autocomplete",
+            "name": "ptz_preset_point",
+            "placeholder": {
+                "en": "Search preset...",
+                "nl": "Zoek punt..."
+            }
+        }
+    ]
+}
