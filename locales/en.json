@@ -1,13 +1,12 @@
 {
     "error": {
-        "access_denied": "You do not have sufficient rights to manage this camera.",
         "configure_smtp_settings": "Please configure your SMTP settings.",
         "connection_refused": "Network connection is refused.",
         "duplicate_device": "This camera is already added to Homey.",
+        "invalid_response": "Got invalid response from the network device.",
         "missing_settings": "Not all settings of the app have been completed.",
         "unknown_error": "An unknown error occured.",
-        "username_password_invalid": "Username or password is invalid.",
-        "wrong_type_response": "Got invalid response from the network device. If the network credentials are correct, this camera model is probably not supported."
+        "username_password_invalid": "Username or password is invalid."
     },
     "from": "From",
     "hostname": "Hostname / IP address",

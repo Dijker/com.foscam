@@ -29,11 +29,12 @@
             { "$extends": "hue" },
             { "$extends": "mirror" },
             { "$extends": "motion_detection_isenabled" },
+            { "$extends": "motion_detection_sensitivity" },
+            { "$extends": "ptz_goto_preset_point" },
             { "$extends": "saturation" },
             { "$extends": "sharpness" },
             { "$extends": "snapshot" },
-            { "$extends": "send_image" },
-            { "$extends": "ptz_goto_preset_point" }
+            { "$extends": "send_image" }
         ],
         "triggers": [
             { "$extends": "snapshot" }
@@ -184,7 +185,7 @@
                     "type": "label",
                     "label": {
                         "en": "Model",
-                        "nl": "Type"
+                        "nl": "Model"
                     },
                     "value": "unknown"
                 },

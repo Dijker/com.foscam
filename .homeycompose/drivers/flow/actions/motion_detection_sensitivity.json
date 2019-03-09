@@ -1,0 +1,49 @@
+{
+    "title": {
+        "en": "Set motion detection sensitivity",
+        "nl": "Zet bewegingsdetectie gevoeligheid"
+    },
+    "args": [
+        {
+            "type": "dropdown",
+            "name": "value",
+            "values": [
+                {
+                    "id": "4",
+                    "label": {
+                        "en": "Lowest",
+                        "nl": "Laagste"
+                    }
+                },
+                {
+                    "id": "3",
+                    "label": {
+                        "en": "Lower",
+                        "nl": "Lager"
+                    }
+                },
+                {
+                    "id": "0",
+                    "label": {
+                        "en": "Low",
+                        "nl": "Laag"
+                    }
+                },
+                {
+                    "id": "1",
+                    "label": {
+                        "en": "Normal",
+                        "nl": "Normaal"
+                    }
+                },
+                {
+                    "id": "2",
+                    "label": {
+                        "en": "High",
+                        "nl": "Hoog"
+                    }
+                }
+            ]
+        }
+    ]
+}

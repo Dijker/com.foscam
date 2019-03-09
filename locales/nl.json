@@ -1,13 +1,12 @@
 {
     "error": {
-        "access_denied": "U heeft niet voldoende rechten om deze camera te beheren.",
         "configure_smtp_settings": "Configureer uw SMTP-instellingen.",
         "connection_refused": "Netwerk verbinding is geweigerd.",
         "duplicate_device": "Deze camera is al toegevoegd aan Homey.",
+        "invalid_response": "Ongeldig antwoord van het netwerkapparaat gekregen.",
         "missing_settings": "Niet alle instellingen van de app zijn ingevuld.",
         "unknown_error": "Er is een onbekende fout opgetreden.",
-        "username_password_invalid": "Gebruikersnaam of wachtwoord is ongeldig.",
-        "wrong_type_response": "Ongeldig antwoord van het netwerkapparaat gekregen. Als de netwerkgegevens juist zijn, wordt dit camera model waarschijnlijk niet ondersteund."
+        "username_password_invalid": "Gebruikersnaam of wachtwoord is ongeldig."
     },
     "from": "Afzender",
     "hostname": "Hostnaam / IP adres",

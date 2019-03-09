@@ -1,6 +1,6 @@
 {
     "id": "com.foscam",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "compatibility": ">=2.0.0",
     "sdk": 2,
     "brandColor": "#EC0928",
@@ -188,8 +188,8 @@
             {
                 "id": "reboot",
                 "title": {
-                    "en": "Reboot",
-                    "nl": "Opnieuw opstarten"
+                    "en": "Reboot the camera",
+                    "nl": "Start camera opnieuw op"
                 },
                 "args": [
                     {
@@ -365,6 +365,83 @@
                 ]
             },
             {
+                "id": "motion_detection_sensitivity",
+                "title": {
+                    "en": "Set motion detection sensitivity",
+                    "nl": "Zet bewegingsdetectie gevoeligheid"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=bullet"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "4",
+                                "label": {
+                                    "en": "Lowest",
+                                    "nl": "Laagste"
+                                }
+                            },
+                            {
+                                "id": "3",
+                                "label": {
+                                    "en": "Lower",
+                                    "nl": "Lager"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "label": {
+                                    "en": "Low",
+                                    "nl": "Laag"
+                                }
+                            },
+                            {
+                                "id": "1",
+                                "label": {
+                                    "en": "Normal",
+                                    "nl": "Normaal"
+                                }
+                            },
+                            {
+                                "id": "2",
+                                "label": {
+                                    "en": "High",
+                                    "nl": "Hoog"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ptz_goto_preset_point",
+                "title": {
+                    "en": "Go to preset point",
+                    "nl": "Ga naar ingesteld punt"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=bullet"
+                    },
+                    {
+                        "type": "autocomplete",
+                        "name": "ptz_preset_point",
+                        "placeholder": {
+                            "en": "Search preset...",
+                            "nl": "Zoek punt..."
+                        }
+                    }
+                ]
+            },
+            {
                 "id": "saturation",
                 "title": {
                     "en": "Set the saturation",
@@ -432,36 +509,14 @@
                         "type": "device",
                         "name": "device",
                         "filter": "driver_id=bullet"
-                    }
-                ]
-            },
-            {
-                "id": "ptz_goto_preset_point",
-                "title": {
-                    "en": "Go to preset point",
-                    "nl": "Ga naar ingesteld punt"
-                },
-                "args": [
-                    {
-                        "type": "device",
-                        "name": "device",
-                        "filter": "driver_id=bullet"
-                    },
-                    {
-                        "type": "autocomplete",
-                        "name": "ptz_preset_point",
-                        "placeholder": {
-                            "en": "Search preset...",
-                            "nl": "Zoek punt..."
-                        }
                     }
                 ]
             },
             {
                 "id": "reboot",
                 "title": {
-                    "en": "Reboot",
-                    "nl": "Opnieuw opstarten"
+                    "en": "Reboot the camera",
+                    "nl": "Start camera opnieuw op"
                 },
                 "args": [
                     {
@@ -637,6 +692,83 @@
                 ]
             },
             {
+                "id": "motion_detection_sensitivity",
+                "title": {
+                    "en": "Set motion detection sensitivity",
+                    "nl": "Zet bewegingsdetectie gevoeligheid"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=cube"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "4",
+                                "label": {
+                                    "en": "Lowest",
+                                    "nl": "Laagste"
+                                }
+                            },
+                            {
+                                "id": "3",
+                                "label": {
+                                    "en": "Lower",
+                                    "nl": "Lager"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "label": {
+                                    "en": "Low",
+                                    "nl": "Laag"
+                                }
+                            },
+                            {
+                                "id": "1",
+                                "label": {
+                                    "en": "Normal",
+                                    "nl": "Normaal"
+                                }
+                            },
+                            {
+                                "id": "2",
+                                "label": {
+                                    "en": "High",
+                                    "nl": "Hoog"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ptz_goto_preset_point",
+                "title": {
+                    "en": "Go to preset point",
+                    "nl": "Ga naar ingesteld punt"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=cube"
+                    },
+                    {
+                        "type": "autocomplete",
+                        "name": "ptz_preset_point",
+                        "placeholder": {
+                            "en": "Search preset...",
+                            "nl": "Zoek punt..."
+                        }
+                    }
+                ]
+            },
+            {
                 "id": "saturation",
                 "title": {
                     "en": "Set the saturation",
@@ -704,36 +836,14 @@
                         "type": "device",
                         "name": "device",
                         "filter": "driver_id=cube"
-                    }
-                ]
-            },
-            {
-                "id": "ptz_goto_preset_point",
-                "title": {
-                    "en": "Go to preset point",
-                    "nl": "Ga naar ingesteld punt"
-                },
-                "args": [
-                    {
-                        "type": "device",
-                        "name": "device",
-                        "filter": "driver_id=cube"
-                    },
-                    {
-                        "type": "autocomplete",
-                        "name": "ptz_preset_point",
-                        "placeholder": {
-                            "en": "Search preset...",
-                            "nl": "Zoek punt..."
-                        }
                     }
                 ]
             },
             {
                 "id": "reboot",
                 "title": {
-                    "en": "Reboot",
-                    "nl": "Opnieuw opstarten"
+                    "en": "Reboot the camera",
+                    "nl": "Start camera opnieuw op"
                 },
                 "args": [
                     {
@@ -909,6 +1019,83 @@
                 ]
             },
             {
+                "id": "motion_detection_sensitivity",
+                "title": {
+                    "en": "Set motion detection sensitivity",
+                    "nl": "Zet bewegingsdetectie gevoeligheid"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=dome"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "4",
+                                "label": {
+                                    "en": "Lowest",
+                                    "nl": "Laagste"
+                                }
+                            },
+                            {
+                                "id": "3",
+                                "label": {
+                                    "en": "Lower",
+                                    "nl": "Lager"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "label": {
+                                    "en": "Low",
+                                    "nl": "Laag"
+                                }
+                            },
+                            {
+                                "id": "1",
+                                "label": {
+                                    "en": "Normal",
+                                    "nl": "Normaal"
+                                }
+                            },
+                            {
+                                "id": "2",
+                                "label": {
+                                    "en": "High",
+                                    "nl": "Hoog"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ptz_goto_preset_point",
+                "title": {
+                    "en": "Go to preset point",
+                    "nl": "Ga naar ingesteld punt"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=dome"
+                    },
+                    {
+                        "type": "autocomplete",
+                        "name": "ptz_preset_point",
+                        "placeholder": {
+                            "en": "Search preset...",
+                            "nl": "Zoek punt..."
+                        }
+                    }
+                ]
+            },
+            {
                 "id": "saturation",
                 "title": {
                     "en": "Set the saturation",
@@ -976,36 +1163,14 @@
                         "type": "device",
                         "name": "device",
                         "filter": "driver_id=dome"
-                    }
-                ]
-            },
-            {
-                "id": "ptz_goto_preset_point",
-                "title": {
-                    "en": "Go to preset point",
-                    "nl": "Ga naar ingesteld punt"
-                },
-                "args": [
-                    {
-                        "type": "device",
-                        "name": "device",
-                        "filter": "driver_id=dome"
-                    },
-                    {
-                        "type": "autocomplete",
-                        "name": "ptz_preset_point",
-                        "placeholder": {
-                            "en": "Search preset...",
-                            "nl": "Zoek punt..."
-                        }
                     }
                 ]
             },
             {
                 "id": "reboot",
                 "title": {
-                    "en": "Reboot",
-                    "nl": "Opnieuw opstarten"
+                    "en": "Reboot the camera",
+                    "nl": "Start camera opnieuw op"
                 },
                 "args": [
                     {
@@ -1181,6 +1346,83 @@
                 ]
             },
             {
+                "id": "motion_detection_sensitivity",
+                "title": {
+                    "en": "Set motion detection sensitivity",
+                    "nl": "Zet bewegingsdetectie gevoeligheid"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=pt"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "4",
+                                "label": {
+                                    "en": "Lowest",
+                                    "nl": "Laagste"
+                                }
+                            },
+                            {
+                                "id": "3",
+                                "label": {
+                                    "en": "Lower",
+                                    "nl": "Lager"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "label": {
+                                    "en": "Low",
+                                    "nl": "Laag"
+                                }
+                            },
+                            {
+                                "id": "1",
+                                "label": {
+                                    "en": "Normal",
+                                    "nl": "Normaal"
+                                }
+                            },
+                            {
+                                "id": "2",
+                                "label": {
+                                    "en": "High",
+                                    "nl": "Hoog"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ptz_goto_preset_point",
+                "title": {
+                    "en": "Go to preset point",
+                    "nl": "Ga naar ingesteld punt"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=pt"
+                    },
+                    {
+                        "type": "autocomplete",
+                        "name": "ptz_preset_point",
+                        "placeholder": {
+                            "en": "Search preset...",
+                            "nl": "Zoek punt..."
+                        }
+                    }
+                ]
+            },
+            {
                 "id": "saturation",
                 "title": {
                     "en": "Set the saturation",
@@ -1248,36 +1490,14 @@
                         "type": "device",
                         "name": "device",
                         "filter": "driver_id=pt"
-                    }
-                ]
-            },
-            {
-                "id": "ptz_goto_preset_point",
-                "title": {
-                    "en": "Go to preset point",
-                    "nl": "Ga naar ingesteld punt"
-                },
-                "args": [
-                    {
-                        "type": "device",
-                        "name": "device",
-                        "filter": "driver_id=pt"
-                    },
-                    {
-                        "type": "autocomplete",
-                        "name": "ptz_preset_point",
-                        "placeholder": {
-                            "en": "Search preset...",
-                            "nl": "Zoek punt..."
-                        }
                     }
                 ]
             },
             {
                 "id": "reboot",
                 "title": {
-                    "en": "Reboot",
-                    "nl": "Opnieuw opstarten"
+                    "en": "Reboot the camera",
+                    "nl": "Start camera opnieuw op"
                 },
                 "args": [
                     {
@@ -1453,6 +1673,83 @@
                 ]
             },
             {
+                "id": "motion_detection_sensitivity",
+                "title": {
+                    "en": "Set motion detection sensitivity",
+                    "nl": "Zet bewegingsdetectie gevoeligheid"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=ptz"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "value",
+                        "values": [
+                            {
+                                "id": "4",
+                                "label": {
+                                    "en": "Lowest",
+                                    "nl": "Laagste"
+                                }
+                            },
+                            {
+                                "id": "3",
+                                "label": {
+                                    "en": "Lower",
+                                    "nl": "Lager"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "label": {
+                                    "en": "Low",
+                                    "nl": "Laag"
+                                }
+                            },
+                            {
+                                "id": "1",
+                                "label": {
+                                    "en": "Normal",
+                                    "nl": "Normaal"
+                                }
+                            },
+                            {
+                                "id": "2",
+                                "label": {
+                                    "en": "High",
+                                    "nl": "Hoog"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ptz_goto_preset_point",
+                "title": {
+                    "en": "Go to preset point",
+                    "nl": "Ga naar ingesteld punt"
+                },
+                "args": [
+                    {
+                        "type": "device",
+                        "name": "device",
+                        "filter": "driver_id=ptz"
+                    },
+                    {
+                        "type": "autocomplete",
+                        "name": "ptz_preset_point",
+                        "placeholder": {
+                            "en": "Search preset...",
+                            "nl": "Zoek punt..."
+                        }
+                    }
+                ]
+            },
+            {
                 "id": "saturation",
                 "title": {
                     "en": "Set the saturation",
@@ -1520,28 +1817,6 @@
                         "type": "device",
                         "name": "device",
                         "filter": "driver_id=ptz"
-                    }
-                ]
-            },
-            {
-                "id": "ptz_goto_preset_point",
-                "title": {
-                    "en": "Go to preset point",
-                    "nl": "Ga naar ingesteld punt"
-                },
-                "args": [
-                    {
-                        "type": "device",
-                        "name": "device",
-                        "filter": "driver_id=ptz"
-                    },
-                    {
-                        "type": "autocomplete",
-                        "name": "ptz_preset_point",
-                        "placeholder": {
-                            "en": "Search preset...",
-                            "nl": "Zoek punt..."
-                        }
                     }
                 ]
             }
@@ -1714,7 +1989,7 @@
                             "type": "label",
                             "label": {
                                 "en": "Model",
-                                "nl": "Type"
+                                "nl": "Model"
                             },
                             "value": "unknown"
                         },
@@ -1920,7 +2195,7 @@
                             "type": "label",
                             "label": {
                                 "en": "Model",
-                                "nl": "Type"
+                                "nl": "Model"
                             },
                             "value": "unknown"
                         },
@@ -2126,7 +2401,7 @@
                             "type": "label",
                             "label": {
                                 "en": "Model",
-                                "nl": "Type"
+                                "nl": "Model"
                             },
                             "value": "unknown"
                         },
@@ -2332,7 +2607,7 @@
                             "type": "label",
                             "label": {
                                 "en": "Model",
-                                "nl": "Type"
+                                "nl": "Model"
                             },
                             "value": "unknown"
                         },
@@ -2538,7 +2813,7 @@
                             "type": "label",
                             "label": {
                                 "en": "Model",
-                                "nl": "Type"
+                                "nl": "Model"
                             },
                             "value": "unknown"
                         },
