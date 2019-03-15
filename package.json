@@ -1,6 +1,6 @@
 {
     "name": "com.foscam",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "description": "Control Foscam IPCameras for Homey",
     "main": "app.js",
     "directories": {

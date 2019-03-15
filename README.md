@@ -8,6 +8,10 @@ Homey will automatically fetch the camera settings every minute.
 
 **It would be highly appreciated if you could let me know when you're having trouble with a specific model.**
 
+If you like this app, consider a donation to support development:
+
+[![Paypal donate][pp-donate-image]][pp-donate-link]
+
 
 ## Supported devices
 This app should support most *newer* types of devices below. I do not know about the Baby Monitor and Battery Camera. Please let me know!
@@ -55,13 +59,9 @@ If you have any questions or feedback, please contact me on [Slack](https://atho
 
 Please report issues and feature requests at the [issues section](https://github.com/edwinvdpol/com.foscam/issues) on GitHub.
 
-### Donate
-"Service to others is the rent you pay for your room here on earth." - **Muhammad Ali**
-
-[![Paypal donate][pp-donate-image]][pp-donate-link]
 
 ## Changelog
 [Check it out here!](https://github.com/edwinvdpol/com.foscam/blob/master/CHANGELOG.md)
 
 [pp-donate-link]: https://www.paypal.me/edwinvdpol
-[pp-donate-image]: https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif
+[pp-donate-image]: https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif
