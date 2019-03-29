@@ -1,5 +1,10 @@
+## 1.2.3 / 2019-03-29
+- Added motion detection settings for FI9928P camera.
+
+
 ## 1.2.2 / 2019-03-15
 - Added motion detection settings for FI9900EP camera.
+
 
 ## 1.2.1 / 2019-03-09
 - Added motion detection settings for the R2, R4 and C2 cameras.
