@@ -1,3 +1,7 @@
+## 1.2.4 / 2019-03-29
+- Added more error logging for better support / diagnostic report
+
+
 ## 1.2.3 / 2019-03-29
 - Added motion detection settings for FI9928P camera.
 
