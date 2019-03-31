@@ -1,4 +1,4 @@
-## 1.2.4 / 2019-03-29
+## 1.2.4 / 2019-03-31
 - Added more error logging for better support / diagnostic report
 
 
