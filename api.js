@@ -56,13 +56,13 @@ module.exports = [
                 .then( result => {
                     callback(null, result);
                 }).catch( err => {
-                    Homey.app.error('verify_email_settings', err);
+                    console.log('verify_email_settings', err);
 
                     if (err.responseCode && Number(err.responseCode) === 535) {
-                        callback(Homey.__('error.username_password_invalid'));
+                        callback(Homey.__('error.login'));
                     }
 
-                    callback(Homey.__('error.connection_refused'));
+                    callback(Homey.__('error.connection'));
                 });
         }
     }

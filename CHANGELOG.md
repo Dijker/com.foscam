@@ -1,3 +1,10 @@
+## 2.0.0 / 2019-04-17 (*re-pair required!*)
+- Added camera support read only settings.
+- Changed logging text and error format.
+- Fixed motion detection settings for all supported devices.
+- Fixed translations.
+
+
 ## 1.2.4 / 2019-03-31
 - Added more error logging for better support / diagnostic report
 
@@ -17,7 +24,6 @@
 
 
 ## 1.2.0 / 2019-03-06
-
 - Added motion detection settings (device).
 - Added 'Set motion detection on/off' action flowcard.
 - Added 'Goto PTZ preset point' action flowcard.
@@ -28,7 +34,6 @@
 
 
 ## 1.1.0 / 2019-03-01
-
 - Added check if device is already added when pairing device.
 - Added extensive logging for better support.
 - Added logs tab in the app settings screen for better support.
@@ -39,5 +44,4 @@
 
 
 ## 1.0.0 / 2019-02-14
-
 - Initial working version.

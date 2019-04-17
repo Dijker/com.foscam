@@ -18,6 +18,17 @@
         {
             "id": "start",
             "$template": "start"
+        },
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices"
         }
     ],
     "$flow": {
@@ -44,53 +55,6 @@
         {
             "type": "group",
             "label": {
-                "en": "Network settings",
-                "nl": "Netwerk instellingen"
-            },
-            "children": [
-                {
-                    "id": "host",
-                    "type": "text",
-                    "label": {
-                        "en": "Hostname / IP address",
-                        "nl": "Hostnaam / IP adres"
-                    },
-                    "value": "unknown"
-                },
-                {
-                    "id": "port",
-                    "type": "number",
-                    "label": {
-                        "en": "Port",
-                        "nl": "Poort"
-                    },
-                    "value": 88,
-                    "min": 1,
-                    "max": 65533
-                },
-                {
-                    "id": "username",
-                    "type": "text",
-                    "label": {
-                        "en": "Username",
-                        "nl": "Gebruikersnaam"
-                    },
-                    "value": "unknown"
-                },
-                {
-                    "id": "password",
-                    "type": "password",
-                    "label": {
-                        "en": "Password",
-                        "nl": "Wachtwoord"
-                    },
-                    "value": "unknown"
-                }
-            ]
-        },
-        {
-            "type": "group",
-            "label": {
                 "en": "Motion detection settings",
                 "nl": "Bewegingsdetectie instellingen"
             },
@@ -101,8 +65,8 @@
                     "label": "Status",
                     "value": "1",
                     "hint": {
-                        "en": "Enable or disable motion dection",
-                        "nl": "Schakel bewegingsdetectie in of uit"
+                        "en": "Enable or disable motion dection.",
+                        "nl": "Schakel bewegingsdetectie in of uit."
                     },
                     "values": [
                         {
@@ -130,8 +94,8 @@
                     },
                     "value": "1",
                     "hint": {
-                        "en": "Set the sensitivity of the motion detection",
-                        "nl": "Stel de gevoeligheid van de bewegingsdetectie in"
+                        "en": "Set the sensitivity of the motion detection.",
+                        "nl": "Stel de gevoeligheid van de bewegingsdetectie in."
                     },
                     "values": [
                         {
@@ -176,12 +140,12 @@
         {
             "type": "group",
             "label": {
-                "en": "Device information",
-                "nl": "Apparaat informatie"
+                "en": "Camera information",
+                "nl": "Camera informatie"
             },
             "children": [
                 {
-                    "id": "product_name",
+                    "id": "model",
                     "type": "label",
                     "label": {
                         "en": "Model",
@@ -196,10 +160,10 @@
                         "en": "MAC",
                         "nl": "MAC"
                     },
-                    "value": "AA:BB:CC:DD:EE:FF"
+                    "value": "-"
                 },
                 {
-                    "id": "firmware_version",
+                    "id": "firmware",
                     "type": "label",
                     "label": {
                         "en": "Firmware version",
@@ -208,13 +172,113 @@
                     "value": "unknown"
                 },
                 {
-                    "id": "hardware_version",
+                    "id": "hardware",
                     "type": "label",
                     "label": {
                         "en": "Hardware version",
                         "nl": "Hardware versie"
                     },
                     "value": "unknown"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "label": {
+                "en": "Camera support",
+                "nl": "Camera ondersteuning"
+            },
+            "children": [
+                {
+                    "id": "sdcard_support",
+                    "type": "label",
+                    "label": {
+                        "en": "SD card",
+                        "nl": "SD-kaart"
+                    },
+                    "value": "unknown",
+                    "hint": {
+                        "en": "Whether the camera support a SD card",
+                        "nl": "Of de camera een SD-kaart ondersteunt"
+                    }
+                },
+                {
+                    "id": "pt_support",
+                    "type": "label",
+                    "label": {
+                        "en": "Pan/Tilt",
+                        "nl": "Pan/Tilt"
+                    },
+                    "value": "unknown",
+                    "hint": {
+                        "en": "Whether the camera supports Pan/Tilt",
+                        "nl": "Of de camera Pan/Tilt ondersteunt"
+                    }
+                },
+                {
+                    "id": "zoom_support",
+                    "type": "label",
+                    "label": {
+                        "en": "Zoom",
+                        "nl": "Zoom"
+                    },
+                    "value": "unknown",
+                    "hint": {
+                        "en": "Whether the camera supports zoom",
+                        "nl": "Of de camera zoom ondersteunt"
+                    }
+                },
+                {
+                    "id": "rs485_support",
+                    "type": "label",
+                    "label": {
+                        "en": "RS485 interface",
+                        "nl": "RS485 interface"
+                    },
+                    "value": "unknown",
+                    "hint": {
+                        "en": "Whether the camera has a RS485 interface",
+                        "nl": "Of de camera een RS485 interface heeft"
+                    }
+                },
+                {
+                    "id": "wps_support",
+                    "type": "label",
+                    "label": {
+                        "en": "Wi-Fi Protected Setup",
+                        "nl": "Wi-Fi Protected Setup"
+                    },
+                    "value": "unknown",
+                    "hint": {
+                        "en": "Whether the camera supports Wi-Fi Protected Setup",
+                        "nl": "Of de camera Wi-Fi Protected Setup ondersteunt"
+                    }
+                },
+                {
+                    "id": "p2p_support",
+                    "type": "label",
+                    "label": {
+                        "en": "Peer-to-peer",
+                        "nl": "Peer-to-peer"
+                    },
+                    "value": "unknown",
+                    "hint": {
+                        "en": "Whether the camera supports Peer-to-peer",
+                        "nl": "Of de camera Peer-to-peer ondersteunt"
+                    }
+                },
+                {
+                    "id": "onvif_support",
+                    "type": "label",
+                    "label": {
+                        "en": "Open Network Video Interface Forum",
+                        "nl": "Open Network Video Interface Forum"
+                    },
+                    "value": "unknown",
+                    "hint": {
+                        "en": "Whether the camera supports ONVIF",
+                        "nl": "Of de camera ONVIF ondersteunt"
+                    }
                 }
             ]
         }

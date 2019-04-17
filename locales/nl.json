@@ -1,23 +1,19 @@
 {
     "error": {
         "configure_smtp_settings": "Configureer uw SMTP-instellingen.",
-        "connection_refused": "Netwerk verbinding is geweigerd.",
-        "duplicate_device": "Deze camera is al toegevoegd aan Homey.",
-        "invalid_response": "Ongeldig antwoord van het netwerkapparaat gekregen.",
-        "missing_settings": "Niet alle instellingen van de app zijn ingevuld.",
-        "unknown_error": "Er is een onbekende fout opgetreden.",
-        "username_password_invalid": "Gebruikersnaam of wachtwoord is ongeldig."
+        "connection": "Netwerk verbinding is geweigerd.",
+        "login": "Gebruikersnaam of wachtwoord is ongeldig.",
+        "response": "Ongeldig antwoord van netwerkapparaat gekregen.",
+        "unknown": "Er is een onbekende fout opgetreden."
     },
     "from": "Afzender",
-    "hostname": "Hostnaam / IP adres",
+    "hostname": "Hostnaam",
+    "ip": "IP-adres",
     "loading-spinner": "<i class=\"fas fa-circle-notch fa-spin\"></i>",
+    "login": "Inloggen",
     "no": "Nee",
     "pair": {
-        "intro": "Geef hier onder de netwerk- en inloggegevens van de camera in.<br /><strong>Let op:</strong> Het account dient over 'admin' rechten te beschikken.",
-        "connect": "Verbinden",
-        "connected": "<i class=\"fas fa-check\"></i> Verbonden",
-        "successfull": "Uw camera is succesvol gekoppeld!",
-        "title": "Apparaat toevoegen"
+        "intro": "Geef hier onder de netwerk- en inloggegevens van de camera in. Het account dient over '<strong>admin</strong>' rechten te beschikken."
     },
     "password": "Wachtwoord",
     "port": "Poort",

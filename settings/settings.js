@@ -1,35 +1,34 @@
 function onHomeyReady (Homey) {
-
-    Homey.get('mail_host', (err, mail_host) => {
-        if (mail_host) { $('#host').val(mail_host); }
+    Homey.get('host', (err, host) => {
+        if (host) { $('#host').val(host); }
     });
 
-    Homey.get('mail_port', (err, mail_port) => {
-        if (mail_port) { $('#port').val(mail_port); }
+    Homey.get('port', (err, port) => {
+        if (port) { $('#port').val(port); }
     });
 
-    Homey.get('mail_username', (err, mail_username) => {
-        if (mail_username) { $('#username').val(mail_username); }
+    Homey.get('username', (err, username) => {
+        if (username) { $('#username').val(username); }
     });
 
-    Homey.get('mail_password', (err, mail_password) => {
-        if (mail_password) { $('#password').val(mail_password); }
+    Homey.get('password', (err, password) => {
+        if (password) { $('#password').val(password); }
     });
 
-    Homey.get('mail_from', (err, mail_from) => {
-        if (mail_from) { $('#from').val(mail_from); }
+    Homey.get('from', (err, from) => {
+        if (from) { $('#from').val(from); }
     });
 
-    Homey.get('mail_recipient', (err, mail_recipient) => {
-        if (mail_recipient) { $('#recipient').val(mail_recipient); }
+    Homey.get('recipient', (err, recipient) => {
+        if (recipient) { $('#recipient').val(recipient); }
     });
 
-    Homey.get('mail_after_snapshot', (err, mail_after_snapshot) => {
-        if (mail_after_snapshot) { $('#mailAfterSnapshot').val(mail_after_snapshot); }
+    Homey.get('after_snapshot', (err, after_snapshot) => {
+        if (after_snapshot) { $('#mailAfterSnapshot').val(after_snapshot); }
     });
 
-    Homey.get('mail_send_as', (err, mail_send_as) => {
-        if (mail_send_as) { $('#sendAs').val(mail_send_as); }
+    Homey.get('send_as', (err, send_as) => {
+        if (send_as) { $('#sendAs').val(send_as); }
     });
 
     Homey.ready();
@@ -41,7 +40,6 @@ $(document).on('focus', 'input, select', function () {
 });
 
 $(document).on('click', '#save', function (e) {
-
     var $this = $(this);
 
     $this.html(__('loading-spinner')).prop('disabled', 'disabled');
@@ -62,29 +60,41 @@ $(document).on('click', '#save', function (e) {
         sendas: $('#sendAs').val()
     };
 
-    Homey.api('PUT', '/verify_email_settings', settings, (err, result) => {
-        if (err) {
-            Homey.alert(err.message, 'error');
-            $this.html(__('save')).removeAttr('disabled');
-        } else {
+    if ($('#mailAfterSnapshot').val() === '1') {
+        Homey.api('PUT', '/verify_email_settings', settings, (err, result) => {
+            if (err) {
+                Homey.alert(err.message, 'error');
+                $this.html(__('save')).removeAttr('disabled');
+            } else {
 
-            Homey.set('mail_host', settings.host);
-            Homey.set('mail_port', settings.port);
-            Homey.set('mail_username', settings.username);
-            Homey.set('mail_password', settings.password);
-            Homey.set('mail_from', settings.from);
-            Homey.set('mail_recipient', settings.recipient);
-            Homey.set('mail_after_snapshot', settings.emailafter);
-            Homey.set('mail_send_as', settings.sendas);
+                Homey.set('host', settings.host);
+                Homey.set('port', settings.port);
+                Homey.set('username', settings.username);
+                Homey.set('password', settings.password);
+                Homey.set('from', settings.from);
+                Homey.set('recipient', settings.recipient);
+                Homey.set('after_snapshot', settings.emailafter);
+                Homey.set('send_as', settings.sendas);
 
-            $this.html(__('saved')).prop('disabled', 'disabled');
-        }
-    });
+                $this.html(__('saved')).prop('disabled', 'disabled');
+            }
+        });
+    } else {
+        Homey.set('host', settings.host);
+        Homey.set('port', settings.port);
+        Homey.set('username', settings.username);
+        Homey.set('password', settings.password);
+        Homey.set('from', settings.from);
+        Homey.set('recipient', settings.recipient);
+        Homey.set('after_snapshot', settings.emailafter);
+        Homey.set('send_as', settings.sendas);
+
+        $this.html(__('saved')).prop('disabled', 'disabled');
+    }
 
 });
 
 $(document).on('click', '#deleteLogs', function (e) {
-
     var $this = $(this);
 
     $this.html(__('loading-spinner')).prop('disabled', 'disabled');
@@ -106,7 +116,6 @@ $(document).on('click', '#deleteLogs', function (e) {
 });
 
 function showTab (tab) {
-
     if (tab === 2) {
         updateLogs();
     }
@@ -118,7 +127,6 @@ function showTab (tab) {
 }
 
 function validateForm () {
-
     let error = false;
 
     $('.invalid').removeClass('invalid');
@@ -155,7 +163,6 @@ function displayLogs (lines) {
 }
 
 function updateLogs () {
-
     $('#loglines').html('<div style="font-size:16px;text-align:center;width:100%;"> ' + __('loading-spinner') + '</div>');
 
     Homey.api('GET', '/logs', null, (err, result) => {

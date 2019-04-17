@@ -9,12 +9,14 @@ html, body {
 }
 
 button {
+    background-color: rgb(75,215,99) !important;
+    color: rgb(255,255,255) !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 10px !important;
     font-size: large !important;
     vertical-align: middle !important;
-    border: 1px solid rgb(220,220,220) !important;
+    border: 1px solid rgb(75,215,99) !important;
 }
 
 select,
@@ -24,9 +26,8 @@ input[type=password] {
     border: none !important;
     width: 95% !important;
     padding-left: 5px !important;
-    font-size: large !important;
     vertical-align: middle !important;
-    background: white !important;
+    background: rgb(255,255,255) !important;
 }
 
 fieldset.invalid {
@@ -35,30 +36,6 @@ fieldset.invalid {
 
 fieldset.invalid > legend {
     color: rgb(236,9,40);
-}
-
-.btn {
-    margin-bottom: 0px;
-    font-size: 12px;
-    line-height: 1.42857;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    touch-action: manipulation;
-    cursor: pointer;
-    user-select: none;
-    background-image: none;
-    border-width: 1px;
-    border-style: solid;
-    border-color: transparent;
-    border-image: initial;
-    border-radius: 4px;
-}
-
-.btn.btn-green {
-    background-color: rgb(75,215,99) !important;
-    border-color: rgb(75,215,99) !important;
-    color: rgb(255,255,255) !important;
 }
 
 button:disabled {

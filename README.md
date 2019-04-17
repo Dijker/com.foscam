@@ -6,7 +6,9 @@ Homey will automatically fetch the camera settings every minute.
 
 > Virtually every *newer* camera is supported because all devices use one generic API, but exceptions can occur. The difference with *older* models is that the API support is not the same. - **Foscam Support**
 
-**It would be highly appreciated if you could let me know when you're having trouble with a specific model.**
+It would be highly appreciated if you could let me know when you're having trouble with a specific model.
+
+**Version 2 requires re-pairing of your device(s).**
 
 If you like this app, consider a donation to support development:
 

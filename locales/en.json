@@ -1,23 +1,19 @@
 {
     "error": {
         "configure_smtp_settings": "Please configure your SMTP settings.",
-        "connection_refused": "Network connection is refused.",
-        "duplicate_device": "This camera is already added to Homey.",
-        "invalid_response": "Got invalid response from the network device.",
-        "missing_settings": "Not all settings of the app have been completed.",
-        "unknown_error": "An unknown error occured.",
-        "username_password_invalid": "Username or password is invalid."
+        "connection": "Network connection is refused.",
+        "login": "Username or password is invalid.",
+        "response": "Invalid response from the network device.",
+        "unknown": "An unknown error occured."
     },
     "from": "From",
-    "hostname": "Hostname / IP address",
+    "hostname": "Hostname",
+    "ip": "IP address",
     "loading-spinner": "<i class=\"fas fa-circle-notch fa-spin\"></i>",
+    "login": "Login",
     "no": "No",
     "pair": {
-        "intro": "Enter the network- and login details of the camera here.<br /><strong>Please note:</strong> The account must have 'admin' privileges.",
-        "connect": "Connect",
-        "connected": "<i class=\"fas fa-check\"></i> Connected",
-        "successfull": "Your camera has been successfully connected!",
-        "title": "Add device"
+        "intro": "Enter the network- and login details of the camera here. The account must have '<strong>admin</strong>' privileges."
     },
     "password": "Password",
     "port": "Port",

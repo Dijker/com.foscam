@@ -1,123 +1,149 @@
-<link href="{{assets}}/css/styles.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="/manager/webserver/assets/js/jquery.js"></script>
+<style type="text/css">
+    #pair-template {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+    #pair-form {
+        position: relative;
+        width: 90%
+    }
+    .row {
+        margin-bottom: 1em
+    }
+    .logo {
+        display: block;
+        position: relative;
+        width: 25vw;
+        height: 25vw;
+        margin: 6vw auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(./../assets/icon.svg)
+    }
+    .invalid > label {
+        color: #FF0000 !important
+    }
+    .invalid > input {
+        border-bottom: 1px solid #FF0000 !important
+    }
+    .button {
+        color: rgb(255,255,255) !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 10px !important;
+        font-size: large !important;
+        vertical-align: middle !important;
+        border:1px solid rgb(75,215,99) !important;
+        background-color:rgb(75,215,99) !important;
+    }
+    .button:disabled,.button[disabled] {
+        opacity: 0.6;
+    }
+    select, input[type=text], input[type=number], input[type=password] {
+        border: none !important;
+        width: 95% !important;
+        padding-left: 5px !important;
+        vertical-align: middle !important;
+        background: rgb(255,255,255) !important;
+    }
+    fieldset.invalid {
+        border: 1px solid rgb(236,9,40) !important;
+    }
+    fieldset.invalid > legend {
+        color: rgb(236,9,40);
+    }
+</style>
+
+<div id="pair-template">
+    <div id="pair-form">
+        <div class="logo"></div>
+
+        <p data-i18n="pair.intro"></p>
+
+        <fieldset>
+            <legend data-i18n="ip">IP address</legend>
+            <input id="pair-ip" placeholder="192.168.1.1" type="text" value="" />
+        </fieldset>
+
+        <fieldset>
+            <legend data-i18n="port">Port</legend>
+            <input id="pair-port" placeholder="88" type="text" value="88" />
+        </fieldset>
+
+        <fieldset>
+            <legend data-i18n="username">Username</legend>
+            <input id="pair-user" placeholder="admin" type="text" value="" />
+        </fieldset>
+
+        <fieldset>
+            <legend data-i18n="password">Password</legend>
+            <input id="pair-pass" type="password" value="" />
+        </fieldset>
+
+        <button class="button" id="pair-button" onclick="search();" data-i18n="login">Login</button>
+    </div>
+</div>
 
 <script type="text/javascript">
-    Homey.setTitle(__('pair.title'));
-</script>
+    function search () {
+        var error = false;
 
-<p data-i18n="pair.intro"></p>
-
-<fieldset>
-    <legend data-i18n="hostname"></legend>
-    <input id="host" type="text" placeholder="192.168.1.1" value="" />
-</fieldset>
-
-<fieldset>
-    <legend data-i18n="port"></legend>
-    <input id="port" type="number" placeholder="88" value="" />
-</fieldset>
-
-<fieldset>
-    <legend data-i18n="username"></legend>
-    <input id="username" type="text" placeholder="admin" value="" />
-</fieldset>
-
-<fieldset>
-    <legend data-i18n="password"></legend>
-    <input id="password" type="password" value="" />
-</fieldset>
-
-<button id="connect" class="btn btn-green" data-i18n="pair.connect"></button>
-
-<script type="text/javascript">
-
-    $('input').focus(function () {
-        $('#connect').html(__('pair.connect')).removeAttr('disabled');
-        $(this).parent().removeClass('invalid');
-    });
-
-    $('#connect').on('click', function (e) {
-
-        var $this = $(this);
-
-        $this.html(__('loading-spinner')).prop('disabled', 'disabled');
-
-        if (!validateForm()) {
-            $this.html(__('pair.connect')).removeAttr('disabled');
-            return false;
+        let invalids = document.getElementsByClassName('invalid');
+        for (var i = 0; i < invalids.length; i++) {
+           invalids[i].classList.remove('invalid');
         }
 
-        var settings = {
-            host: $('#host').val(),
-            port: Number($('#port').val()),
-            username: $('#username').val(),
-            password: $('#password').val()
-        };
+        var pBtn  = document.getElementById('pair-button');
+        var pIp   = document.getElementById('pair-ip');
+        var pPort = document.getElementById('pair-port');
+        var pUser = document.getElementById('pair-user');
+        var pPass = document.getElementById('pair-pass');
 
-        Homey.emit('addDevice', settings, (err, result) => {
-            if (err) {
-                Homey.alert(err.message, 'error');
-                $this.html(__('pair.connect')).removeAttr('disabled');
-                return false;
-            }
+        pBtn.disabled = true;
 
-            settings.product_name = result.productName;
-            settings.mac = result.mac.toString(16).match(/.{1,2}/g).reverse().join(':');
-            settings.firmware_version = result.firmwareVer;
-            settings.hardware_version = result.hardwareVer;
-
-            var device = {
-                name: result.devName,
-                data: {
-                    id: result.mac
-                },
-                settings: settings
-            };
-
-            Homey.createDevice(device, (err, result) => {
-                if (err) {
-                    Homey.alert(err, 'error');
-                    $this.html(__('pair.connect')).removeAttr('disabled');
-                } else {
-                    $this.html(__('pair.connected')).prop('disabled', 'disabled');
-                    Homey.alert(__('pair.successfull'), 'info');
-                    Homey.done();
-                }
-            });
-        });
-
-    });
-
-    function validateForm () {
-
-        let error = false;
-
-        $('.invalid').removeClass('invalid');
-
-        if ($('#host').val().length === 0) {
-            $('#host').parent().addClass('invalid');
+        if (pIp.value.trim().length === 0) {
+            pIp.parentNode.classList.add('invalid');
             error = true;
         }
 
-        if ($('#port').val().length === 0) {
-            $('#port').parent().addClass('invalid');
+        if (pPort.value.trim().length === 0 || isNaN(pPort.value)) {
+            pPort.parentNode.classList.add('invalid');
             error = true;
         }
 
-        if ($('#username').val().length === 0) {
-            $('#username').parent().addClass('invalid');
+        if (pUser.value.trim().length === 0) {
+            pUser.parentNode.classList.add('invalid');
             error = true;
         }
 
-        if ($('#password').val().length === 0) {
-            $('#password').parent().addClass('invalid');
+        if (pPass.value.length === 0) {
+            pPass.parentNode.classList.add('invalid');
             error = true;
         }
 
         if (error) {
+            pBtn.disabled = false;
             return false;
         }
 
-        return true;
+        let data = {
+            ip: pIp.value,
+            port: pPort.value,
+            username: pUser.value,
+            password: pPass.value
+        };
+
+        Homey.emit('search_devices', data, (error, result) => {
+            pBtn.disabled = false;
+
+            if (error) {
+                Homey.alert(error.message);
+            } else {
+                Homey.showView('list_devices');
+            }
+        });
     }
 </script>

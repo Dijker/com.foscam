@@ -10,10 +10,10 @@
     "insights": true,
     "insightsTitleTrue": {
         "en": "Flip view on",
-        "en": "Flip beeld aan"
+        "nl": "Flip beeld aan"
     },
     "insightsTitleFalse": {
         "en": "Flip view off",
-        "en": "Flip beeld uit"
+        "nl": "Flip beeld uit"
     }
 }

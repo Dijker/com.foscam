@@ -10,10 +10,10 @@
     "insights": true,
     "insightsTitleTrue": {
         "en": "Mirror view on",
-        "en": "Spiegelbeeld aan"
+        "nl": "Spiegelbeeld aan"
     },
     "insightsTitleFalse": {
         "en": "Mirror view off",
-        "en": "Spiegelbeeld uit"
+        "nl": "Spiegelbeeld uit"
     }
 }

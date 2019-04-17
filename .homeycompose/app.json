@@ -1,6 +1,6 @@
 {
     "id": "com.foscam",
-    "version": "1.2.4",
+    "version": "2.0.0",
     "compatibility": ">=2.0.0",
     "sdk": 2,
     "brandColor": "#EC0928",
@@ -9,37 +9,20 @@
         "nl": "Foscam"
     },
     "description": {
-        "en": "Adds support for Foscam IPCameras.",
-        "nl": "Voegt ondersteuning toe voor Foscam IPCamera's."
+        "en": "Adds support for Foscam IP Cameras.",
+        "nl": "Voegt ondersteuning toe voor Foscam IP Camera's."
     },
     "category": [
         "security"
     ],
     "tags": {
         "en": [
-            "foscam",
-            "ipcam",
-            "camera",
-            "webcam",
-            "email",
-            "image",
-            "snapshot",
-            "home",
-            "kantoor",
-            "security"
+            "foscam", "ipcam", "camera", "webcam", "email", "image",
+            "snapshot", "home", "kantoor", "security"
         ],
         "nl": [
-            "foscam",
-            "ipcam",
-            "camera",
-            "webcam",
-            "email",
-            "image",
-            "afbeelding",
-            "snapshot",
-            "thuis",
-            "office",
-            "beveliging"
+            "foscam", "ipcam", "camera", "webcam", "email", "image",
+            "afbeelding", "snapshot", "thuis", "office", "beveliging"
         ]
     },
     "permissions": [],
