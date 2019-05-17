@@ -24,7 +24,11 @@ function onHomeyReady (Homey) {
     });
 
     Homey.get('after_snapshot', (err, after_snapshot) => {
-        if (after_snapshot) { $('#mailAfterSnapshot').val(after_snapshot); }
+        if (after_snapshot) {
+            $('#mailAfterSnapshot').val(after_snapshot);
+        } else {
+            $('#mailAfterSnapshot').val(0);
+        }
     });
 
     Homey.get('send_as', (err, send_as) => {
@@ -42,11 +46,15 @@ $(document).on('focus', 'input, select', function () {
 $(document).on('click', '#save', function (e) {
     var $this = $(this);
 
+    $('.invalid').removeClass('invalid');
+
     $this.html(__('loading-spinner')).prop('disabled', 'disabled');
 
-    if (!validateForm()) {
-        $this.html(__('save')).removeAttr('disabled');
-        return false;
+    if ($('#mailAfterSnapshot').val() === '1') {
+        if (!validateForm()) {
+            $this.html(__('save')).removeAttr('disabled');
+            return false;
+        }
     }
 
     let settings = {
@@ -128,8 +136,6 @@ function showTab (tab) {
 
 function validateForm () {
     let error = false;
-
-    $('.invalid').removeClass('invalid');
 
     if ($('#host').val().length === 0) {
         $('#host').parent().addClass('invalid');

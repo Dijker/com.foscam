@@ -1,3 +1,10 @@
+## 2.0.1 / 2019-05-18
+- Added better error handling for email settings.
+- Changed the 'Send email after snapshot' default setting to 'No'.
+- Fixed check SMTP settings when no snapshot is send afterwards.
+- Remove initial error (determine motion command) to prevent false errors.
+
+
 ## 2.0.0 / 2019-04-17 (*re-pair required!*)
 - Added camera support read only settings.
 - Changed logging text and error format.
