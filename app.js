@@ -2,10 +2,19 @@
 
 const Homey = require('homey');
 
-const Api = require('./lib/Api.js');
-const Logger = require('./lib/Logger.js');
+const Api = require('/lib/Api');
+const Logger = require('/lib/Logger');
 
 class App extends Homey.App {
+
+    /*
+    |---------------------------------------------------------------------------
+    | Initiate
+    |---------------------------------------------------------------------------
+    |
+    | This method is called upon initialization of this application.
+    |
+    */
 
     onInit () {
         this.logger = new Logger('foscam', 200);
@@ -30,9 +39,19 @@ class App extends Homey.App {
     async getSnapshot (data) {
         return this._api.getSnapshot(data);
     }
+
     async sendCommand (command, data, params) {
         return this._api.sendCommand(data, command, params);
     }
+
+    /*
+    |---------------------------------------------------------------------------
+    | Set motion detection configuration
+    |---------------------------------------------------------------------------
+    |
+    | This method is used to update the motion detection config of the camera.
+    |
+    */
 
     async setMotionDetectConfig (data, store, settings) {
         if (settings.motion_detect_isenable) {
@@ -55,14 +74,32 @@ class App extends Homey.App {
         }
 
         return this._api.setMotionDetectConfig(data, store)
-            .then( result => {
+            .then( () => {
                 return store;
             });
     }
 
+    /*
+    |---------------------------------------------------------------------------
+    | Purge logfile
+    |---------------------------------------------------------------------------
+    |
+    | This method is used to purge the logfile.
+    |
+    */
+
     deleteLogs () {
         return this.logger.deleteLogs();
     }
+
+    /*
+    |---------------------------------------------------------------------------
+    | Get logfile content
+    |---------------------------------------------------------------------------
+    |
+    | This method is used to fetch the content of the logfile in an array.
+    |
+    */
 
     getLogs () {
         return this.logger.logArray;
