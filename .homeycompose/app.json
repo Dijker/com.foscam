@@ -1,6 +1,6 @@
 {
     "id": "com.foscam",
-    "version": "2.0.1",
+    "version": "2.1.0",
     "compatibility": ">=2.0.0",
     "sdk": 2,
     "brandColor": "#EC0928",
@@ -17,12 +17,29 @@
     ],
     "tags": {
         "en": [
-            "foscam", "ipcam", "camera", "webcam", "email", "image",
-            "snapshot", "home", "kantoor", "security"
+            "foscam",
+            "ipcam",
+            "camera",
+            "webcam",
+            "email",
+            "image",
+            "snapshot",
+            "home",
+            "kantoor",
+            "security"
         ],
         "nl": [
-            "foscam", "ipcam", "camera", "webcam", "email", "image",
-            "afbeelding", "snapshot", "thuis", "office", "beveliging"
+            "foscam",
+            "ipcam",
+            "camera",
+            "webcam",
+            "email",
+            "image",
+            "afbeelding",
+            "snapshot",
+            "thuis",
+            "office",
+            "beveliging"
         ]
     },
     "permissions": [],

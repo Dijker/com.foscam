@@ -1,3 +1,12 @@
+## 2.1.0 / 2019-06-xx
+- Added inline documentation.
+- Added update interval setting.
+- Changed API library to axios.
+- Implemented new image API (Buffer and Stream both working).
+- Removed image tag from snapshot trigger flowcard.
+- Various big code updates.
+
+
 ## 2.0.1 / 2019-05-18
 - Added better error handling for email settings.
 - Changed the 'Send email after snapshot' default setting to 'No'.

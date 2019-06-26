@@ -1,10 +1,10 @@
 {
     "error": {
-        "configure_smtp_settings": "Configureer uw SMTP-instellingen.",
-        "connection": "Netwerk verbinding is geweigerd.",
-        "login": "Gebruikersnaam of wachtwoord is ongeldig.",
-        "response": "Ongeldig antwoord van netwerkapparaat gekregen.",
-        "unknown": "Er is een onbekende fout opgetreden."
+        "configure_smtp_settings": "Configureer uw SMTP-instellingen",
+        "request": "Kon geen verbinding met apparaat maken",
+        "login": "Gebruikersnaam of wachtwoord is ongeldig",
+        "response": "Ongeldig antwoord van apparaat gekregen",
+        "unknown": "Er is een onbekende fout opgetreden"
     },
     "from": "Afzender",
     "hostname": "Hostnaam",

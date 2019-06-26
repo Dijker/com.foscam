@@ -55,6 +55,29 @@
         {
             "type": "group",
             "label": {
+                "en": "General settings",
+                "nl": "Algemene instellingen"
+            },
+            "children": [
+                {
+                    "id": "refresh_interval",
+                    "type": "number",
+                    "label": {
+                        "en": "Update interval"
+                    },
+                    "value": 60,
+                    "min": 20,
+                    "max": 1800,
+                    "hint": {
+                        "en": "The refresh interval of the settings in seconds.",
+                        "nl": "Het vernieuwingsinterval van de instellingen in seconden."
+                    }
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "label": {
                 "en": "Motion detection settings",
                 "nl": "Bewegingsdetectie instellingen"
             },

@@ -1,7 +1,7 @@
 {
     "title": {
-        "en": "Send image",
-        "nl": "Stuur afbeelding"
+        "en": "Send image via email",
+        "nl": "Stuur afbeelding via e-mail"
     },
     "droptoken": "image"
 }

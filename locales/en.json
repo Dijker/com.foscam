@@ -1,10 +1,10 @@
 {
     "error": {
-        "configure_smtp_settings": "Please configure your SMTP settings.",
-        "connection": "Network connection is refused.",
-        "login": "Username or password is invalid.",
-        "response": "Invalid response from the network device.",
-        "unknown": "An unknown error occured."
+        "configure_smtp_settings": "Please configure your SMTP settings",
+        "request": "Could not connect to device",
+        "login": "Username or password is invalid",
+        "response": "Invalid response from the device",
+        "unknown": "An unknown error occured"
     },
     "from": "From",
     "hostname": "Hostname",

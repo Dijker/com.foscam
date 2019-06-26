@@ -62,7 +62,7 @@ module.exports = [
                         callback(Homey.__('error.login'));
                     }
 
-                    callback(Homey.__('error.connection'));
+                    callback(Homey.__('error.request'));
                 });
         }
     }

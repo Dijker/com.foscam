@@ -1,6 +1,6 @@
 {
     "id": "com.foscam",
-    "version": "2.0.1",
+    "version": "2.1.0",
     "compatibility": ">=2.0.0",
     "sdk": 2,
     "brandColor": "#EC0928",
@@ -74,16 +74,6 @@
                     "en": "Snapshot is taken",
                     "nl": "Snapshot is gemaakt"
                 },
-                "tokens": [
-                    {
-                        "name": "snapshot_token",
-                        "title": {
-                            "en": "Snapshot",
-                            "nl": "Snapshot"
-                        },
-                        "type": "image"
-                    }
-                ],
                 "args": [
                     {
                         "type": "device",
@@ -98,16 +88,6 @@
                     "en": "Snapshot is taken",
                     "nl": "Snapshot is gemaakt"
                 },
-                "tokens": [
-                    {
-                        "name": "snapshot_token",
-                        "title": {
-                            "en": "Snapshot",
-                            "nl": "Snapshot"
-                        },
-                        "type": "image"
-                    }
-                ],
                 "args": [
                     {
                         "type": "device",
@@ -122,16 +102,6 @@
                     "en": "Snapshot is taken",
                     "nl": "Snapshot is gemaakt"
                 },
-                "tokens": [
-                    {
-                        "name": "snapshot_token",
-                        "title": {
-                            "en": "Snapshot",
-                            "nl": "Snapshot"
-                        },
-                        "type": "image"
-                    }
-                ],
                 "args": [
                     {
                         "type": "device",
@@ -146,16 +116,6 @@
                     "en": "Snapshot is taken",
                     "nl": "Snapshot is gemaakt"
                 },
-                "tokens": [
-                    {
-                        "name": "snapshot_token",
-                        "title": {
-                            "en": "Snapshot",
-                            "nl": "Snapshot"
-                        },
-                        "type": "image"
-                    }
-                ],
                 "args": [
                     {
                         "type": "device",
@@ -170,16 +130,6 @@
                     "en": "Snapshot is taken",
                     "nl": "Snapshot is gemaakt"
                 },
-                "tokens": [
-                    {
-                        "name": "snapshot_token",
-                        "title": {
-                            "en": "Snapshot",
-                            "nl": "Snapshot"
-                        },
-                        "type": "image"
-                    }
-                ],
                 "args": [
                     {
                         "type": "device",
@@ -505,8 +455,8 @@
             {
                 "id": "send_image",
                 "title": {
-                    "en": "Send image",
-                    "nl": "Stuur afbeelding"
+                    "en": "Send image via email",
+                    "nl": "Stuur afbeelding via e-mail"
                 },
                 "droptoken": "image",
                 "args": [
@@ -832,8 +782,8 @@
             {
                 "id": "send_image",
                 "title": {
-                    "en": "Send image",
-                    "nl": "Stuur afbeelding"
+                    "en": "Send image via email",
+                    "nl": "Stuur afbeelding via e-mail"
                 },
                 "droptoken": "image",
                 "args": [
@@ -1159,8 +1109,8 @@
             {
                 "id": "send_image",
                 "title": {
-                    "en": "Send image",
-                    "nl": "Stuur afbeelding"
+                    "en": "Send image via email",
+                    "nl": "Stuur afbeelding via e-mail"
                 },
                 "droptoken": "image",
                 "args": [
@@ -1486,8 +1436,8 @@
             {
                 "id": "send_image",
                 "title": {
-                    "en": "Send image",
-                    "nl": "Stuur afbeelding"
+                    "en": "Send image via email",
+                    "nl": "Stuur afbeelding via e-mail"
                 },
                 "droptoken": "image",
                 "args": [
@@ -1813,8 +1763,8 @@
             {
                 "id": "send_image",
                 "title": {
-                    "en": "Send image",
-                    "nl": "Stuur afbeelding"
+                    "en": "Send image via email",
+                    "nl": "Stuur afbeelding via e-mail"
                 },
                 "droptoken": "image",
                 "args": [
@@ -1861,6 +1811,29 @@
                 }
             ],
             "settings": [
+                {
+                    "type": "group",
+                    "label": {
+                        "en": "General settings",
+                        "nl": "Algemene instellingen"
+                    },
+                    "children": [
+                        {
+                            "id": "refresh_interval",
+                            "type": "number",
+                            "label": {
+                                "en": "Update interval"
+                            },
+                            "value": 60,
+                            "min": 20,
+                            "max": 1800,
+                            "hint": {
+                                "en": "The refresh interval of the settings in seconds.",
+                                "nl": "Het vernieuwingsinterval van de instellingen in seconden."
+                            }
+                        }
+                    ]
+                },
                 {
                     "type": "group",
                     "label": {
@@ -2134,6 +2107,29 @@
                 {
                     "type": "group",
                     "label": {
+                        "en": "General settings",
+                        "nl": "Algemene instellingen"
+                    },
+                    "children": [
+                        {
+                            "id": "refresh_interval",
+                            "type": "number",
+                            "label": {
+                                "en": "Update interval"
+                            },
+                            "value": 60,
+                            "min": 20,
+                            "max": 1800,
+                            "hint": {
+                                "en": "The refresh interval of the settings in seconds.",
+                                "nl": "Het vernieuwingsinterval van de instellingen in seconden."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "label": {
                         "en": "Motion detection settings",
                         "nl": "Bewegingsdetectie instellingen"
                     },
@@ -2401,6 +2397,29 @@
                 }
             ],
             "settings": [
+                {
+                    "type": "group",
+                    "label": {
+                        "en": "General settings",
+                        "nl": "Algemene instellingen"
+                    },
+                    "children": [
+                        {
+                            "id": "refresh_interval",
+                            "type": "number",
+                            "label": {
+                                "en": "Update interval"
+                            },
+                            "value": 60,
+                            "min": 20,
+                            "max": 1800,
+                            "hint": {
+                                "en": "The refresh interval of the settings in seconds.",
+                                "nl": "Het vernieuwingsinterval van de instellingen in seconden."
+                            }
+                        }
+                    ]
+                },
                 {
                     "type": "group",
                     "label": {
@@ -2674,6 +2693,29 @@
                 {
                     "type": "group",
                     "label": {
+                        "en": "General settings",
+                        "nl": "Algemene instellingen"
+                    },
+                    "children": [
+                        {
+                            "id": "refresh_interval",
+                            "type": "number",
+                            "label": {
+                                "en": "Update interval"
+                            },
+                            "value": 60,
+                            "min": 20,
+                            "max": 1800,
+                            "hint": {
+                                "en": "The refresh interval of the settings in seconds.",
+                                "nl": "Het vernieuwingsinterval van de instellingen in seconden."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "label": {
                         "en": "Motion detection settings",
                         "nl": "Bewegingsdetectie instellingen"
                     },
@@ -2941,6 +2983,29 @@
                 }
             ],
             "settings": [
+                {
+                    "type": "group",
+                    "label": {
+                        "en": "General settings",
+                        "nl": "Algemene instellingen"
+                    },
+                    "children": [
+                        {
+                            "id": "refresh_interval",
+                            "type": "number",
+                            "label": {
+                                "en": "Update interval"
+                            },
+                            "value": 60,
+                            "min": 20,
+                            "max": 1800,
+                            "hint": {
+                                "en": "The refresh interval of the settings in seconds.",
+                                "nl": "Het vernieuwingsinterval van de instellingen in seconden."
+                            }
+                        }
+                    ]
+                },
                 {
                     "type": "group",
                     "label": {

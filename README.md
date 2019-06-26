@@ -2,13 +2,14 @@
 
 This app will add support for the IP camera's made by [Foscam](https://www.foscam.com "Foscam - Home Security").
 
-Homey will automatically fetch the camera settings every minute.
+Homey will automatically fetch the settings from the camera.
+
+The update interval can be changed in the *device settings*.
 
 > Virtually every *newer* camera is supported because all devices use one generic API, but exceptions can occur. The difference with *older* models is that the API support is not the same. - **Foscam Support**
 
 It would be highly appreciated if you could let me know when you're having trouble with a specific model.
 
-**Version 2 requires re-pairing of your device(s).**
 
 If you like this app, consider a donation to support development:
 
@@ -48,7 +49,7 @@ FI89*xx* [...]
 
 
 ## Supported triggers
-- When the camera takes a snapshot (with image token)
+- When the camera takes a snapshot
 
 
 ## Supported languages
