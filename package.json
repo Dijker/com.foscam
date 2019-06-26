@@ -1,23 +1,7 @@
 {
-    "name": "com.foscam",
-    "version": "2.0.1",
-    "description": "Foscam for Homey",
-    "main": "app.js",
-    "directories": {
-        "lib": "lib"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Edwin van de Pol",
-    "license": "ISC",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/edwinvdpol/com.foscam.git"
-    },
     "dependencies": {
+        "axios": "^0.19.0",
         "fixture-stdout": "^0.2.1",
-        "httpreq": "^0.4.24",
         "nodemailer": "^5.1.1",
         "xml2json-light": "^1.0.6"
     }
