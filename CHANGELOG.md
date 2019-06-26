@@ -1,4 +1,4 @@
-## 2.1.0 / 2019-06-xx
+## 2.1.0 / 2019-06-26
 - Added inline documentation.
 - Added update interval setting.
 - Changed API library to axios.
