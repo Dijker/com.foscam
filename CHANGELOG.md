@@ -1,3 +1,7 @@
+## 2.1.1 / 2019-07-07
+- Fixed API response when adding device.
+
+
 ## 2.1.0 / 2019-06-26
 - Added inline documentation.
 - Added update interval setting.
