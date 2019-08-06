@@ -16,6 +16,9 @@ If you like this app, consider a donation to support development:
 [![Paypal donate][pp-donate-image]][pp-donate-link]
 
 
+If you wonder why the motion detect trigger isn't available, please read [this](https://github.com/edwinvdpol/com.foscam/blob/master/MOTION.md).
+
+
 ## Supported devices
 This app should support most *newer* types of devices below. I do not know about the Baby Monitor and Battery Camera. Please let me know!
 - [Bullet Camera](https://foscam.com/products/Bullet_Camera.html)
