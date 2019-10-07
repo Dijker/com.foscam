@@ -45,7 +45,8 @@
             { "$extends": "saturation" },
             { "$extends": "sharpness" },
             { "$extends": "snapshot" },
-            { "$extends": "send_image" }
+            { "$extends": "send_image" },
+            { "$extends": "schedule_record_isenabled" }
         ],
         "triggers": [
             { "$extends": "snapshot" }
