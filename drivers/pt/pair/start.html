@@ -3,14 +3,11 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center
+        align-items: center;
     }
     #pair-form {
         position: relative;
-        width: 90%
-    }
-    .row {
-        margin-bottom: 1em
+        width: 90%;
     }
     .logo {
         display: block;
@@ -21,13 +18,13 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
-        background-image: url(./../assets/icon.svg)
+        background-image: url(./../assets/icon.svg);
     }
     .invalid > label {
-        color: #FF0000 !important
+        color: #FF0000 !important;
     }
     .invalid > input {
-        border-bottom: 1px solid #FF0000 !important
+        border-bottom: 1px solid #FF0000 !important;
     }
     .button {
         color: rgb(255,255,255) !important;
@@ -89,18 +86,18 @@
 
 <script type="text/javascript">
     function search () {
-        var error = false;
+        let error = false;
 
         let invalids = document.getElementsByClassName('invalid');
         for (var i = 0; i < invalids.length; i++) {
            invalids[i].classList.remove('invalid');
         }
 
-        var pBtn  = document.getElementById('pair-button');
-        var pIp   = document.getElementById('pair-ip');
-        var pPort = document.getElementById('pair-port');
-        var pUser = document.getElementById('pair-user');
-        var pPass = document.getElementById('pair-pass');
+        let pBtn  = document.getElementById('pair-button');
+        let pIp   = document.getElementById('pair-ip');
+        let pPort = document.getElementById('pair-port');
+        let pUser = document.getElementById('pair-user');
+        let pPass = document.getElementById('pair-pass');
 
         pBtn.disabled = true;
 
