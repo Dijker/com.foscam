@@ -1,3 +1,9 @@
+## 2.1.2 / 2019-10-28
+- Added [motion detect trigger documentation](https://github.com/edwinvdpol/com.foscam/blob/master/MOTION.md)
+- Added toggle for schedule record status
+- Minor CSS / JS fixes
+
+
 ## 2.1.1 / 2019-07-07
 - Fixed API response when adding device.
 

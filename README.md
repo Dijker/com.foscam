@@ -67,7 +67,13 @@ Please report issues and feature requests at the [issues section](https://github
 
 
 ## Changelog
-[Check it out here!](https://github.com/edwinvdpol/com.foscam/blob/master/CHANGELOG.md)
+**2.1.2 / 2019-10-28**
+
+- Added [motion detect trigger documentation](https://github.com/edwinvdpol/com.foscam/blob/master/MOTION.md)
+- Added toggle for schedule record status
+- Minor CSS / JS fixes
+
+[Read the full changelog here!](https://github.com/edwinvdpol/com.foscam/blob/master/CHANGELOG.md)
 
 [pp-donate-link]: https://www.paypal.me/edwinvdpol
 [pp-donate-image]: https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif
