@@ -1,4 +1,4 @@
-# Foscam IPCamera for Homey
+# Foscam for Homey
 
 Adds support for Foscam IP Cameras.
 
