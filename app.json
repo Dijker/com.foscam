@@ -1,6 +1,6 @@
 {
     "id": "com.foscam",
-    "version": "2.1.2",
+    "version": "2.1.3",
     "compatibility": ">=2.0.0",
     "sdk": 2,
     "brandColor": "#EC0928",
@@ -9,8 +9,8 @@
         "nl": "Foscam"
     },
     "description": {
-        "en": "Adds support for Foscam IP Cameras.",
-        "nl": "Voegt ondersteuning toe voor Foscam IP Camera's."
+        "en": "Foscam for Homey",
+        "nl": "Foscam voor Homey"
     },
     "category": [
         "security"

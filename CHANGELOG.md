@@ -1,3 +1,7 @@
+## 2.1.3 / 2019-11-12
+- Added support for the new Homey App Store
+
+
 ## 2.1.2 / 2019-10-28
 - Added [motion detect trigger documentation](https://github.com/edwinvdpol/com.foscam/blob/master/MOTION.md)
 - Added toggle for schedule record status

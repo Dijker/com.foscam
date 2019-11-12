@@ -1,8 +1,8 @@
 # Foscam IPCamera for Homey
 
-This app will add support for the IP camera's made by [Foscam](https://www.foscam.com "Foscam - Home Security").
+Adds support for Foscam IP Cameras.
 
-Homey will automatically fetch the settings from the camera.
+Homey will automatically fetch the settings from the camera after adding.
 
 The update interval can be changed in the *device settings*.
 
@@ -10,32 +10,11 @@ The update interval can be changed in the *device settings*.
 
 It would be highly appreciated if you could let me know when you're having trouble with a specific model.
 
-
-If you like this app, consider a donation to support development:
-
-[![Paypal donate][pp-donate-image]][pp-donate-link]
-
-
 If you wonder why the motion detect trigger isn't available, please read [this](https://github.com/edwinvdpol/com.foscam/blob/master/MOTION.md).
 
 
-## Supported devices
-This app should support most *newer* types of devices below. I do not know about the Baby Monitor and Battery Camera. Please let me know!
-- [Bullet Camera](https://foscam.com/products/Bullet_Camera.html)
-- [Cube Camera](https://foscam.com/products/Cube_Camera.html)
-- [Dome Camera](https://foscam.com/products/Dome_Camera.html)
-- [PT Camera](https://foscam.com/products/PT_Camera.html)
-- [PTZ Camera](https://foscam.com/products/PTZ_Camera.html)
-
-
-## Unsupported models
-FI89*xx* [...]
-
-
 ## Supported actions
-
-**If you would like to use the email snapshot feature, do not forget to configure the app settings.**
-- Create snapshot image
+- Create snapshot image (configure settings)
 - Send image via email as attachment or inline
 - Set brightness of the video
 - Set contrast of the video
@@ -44,15 +23,17 @@ FI89*xx* [...]
 - Set sharpness of the video
 - Set motion detection on/off
 - Flip the video horizontal
-- Goto PTZ preset point [`*`]
+- Goto PTZ preset point
 - Mirror the video
 - Reboot the camera
-
-[`*`] Your camera has to support this, please refer to the [user manual](https://foscam.com/downloads/user_mannual.html).
 
 
 ## Supported triggers
 - When the camera takes a snapshot
+
+
+## Unsupported models
+FI89*xx* [...]
 
 
 ## Supported languages
@@ -64,16 +45,3 @@ FI89*xx* [...]
 If you have any questions or feedback, please contact me on [Slack](https://athomcommunity.slack.com/team/evdpol).
 
 Please report issues and feature requests at the [issues section](https://github.com/edwinvdpol/com.foscam/issues) on GitHub.
-
-
-## Changelog
-**2.1.2 / 2019-10-28**
-
-- Added [motion detect trigger documentation](https://github.com/edwinvdpol/com.foscam/blob/master/MOTION.md)
-- Added toggle for schedule record status
-- Minor CSS / JS fixes
-
-[Read the full changelog here!](https://github.com/edwinvdpol/com.foscam/blob/master/CHANGELOG.md)
-
-[pp-donate-link]: https://www.paypal.me/edwinvdpol
-[pp-donate-image]: https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif
