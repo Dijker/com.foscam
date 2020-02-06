@@ -1,19 +1,19 @@
 {
-    "type": "boolean",
-    "title": {
-        "en": "Mirror view",
-        "nl": "Spiegelbeeld"
-    },
-    "getable": true,
-    "setable": true,
-    "uiComponent": "toggle",
-    "insights": true,
-    "insightsTitleTrue": {
-        "en": "Mirror view on",
-        "nl": "Spiegelbeeld aan"
-    },
-    "insightsTitleFalse": {
-        "en": "Mirror view off",
-        "nl": "Spiegelbeeld uit"
-    }
+  "type": "boolean",
+  "title": {
+    "en": "Mirror view",
+    "nl": "Spiegelbeeld"
+  },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "toggle",
+  "insights": true,
+  "insightsTitleTrue": {
+    "en": "Mirror view on",
+    "nl": "Spiegelbeeld aan"
+  },
+  "insightsTitleFalse": {
+    "en": "Mirror view off",
+    "nl": "Spiegelbeeld uit"
+  }
 }

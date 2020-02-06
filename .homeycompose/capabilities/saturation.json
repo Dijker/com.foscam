@@ -1,13 +1,13 @@
 {
-    "type": "number",
-    "title": {
-        "en": "Saturation",
-        "nl": "Verzadiging"
-    },
-    "uiComponent": "slider",
-    "getable": true,
-    "setable": true,
-    "min": 0,
-    "max": 100,
-    "step": 1
+  "type": "number",
+  "title": {
+    "en": "Saturation",
+    "nl": "Verzadiging"
+  },
+  "uiComponent": "slider",
+  "getable": true,
+  "setable": true,
+  "min": 0,
+  "max": 100,
+  "step": 1
 }

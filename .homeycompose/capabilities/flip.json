@@ -1,19 +1,19 @@
 {
-    "type": "boolean",
-    "title": {
-        "en": "Flip view",
-        "nl": "Flip beeld"
-    },
-    "getable": true,
-    "setable": true,
-    "uiComponent": "toggle",
-    "insights": true,
-    "insightsTitleTrue": {
-        "en": "Flip view on",
-        "nl": "Flip beeld aan"
-    },
-    "insightsTitleFalse": {
-        "en": "Flip view off",
-        "nl": "Flip beeld uit"
-    }
+  "type": "boolean",
+  "title": {
+    "en": "Flip view",
+    "nl": "Flip beeld"
+  },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "toggle",
+  "insights": true,
+  "insightsTitleTrue": {
+    "en": "Flip view on",
+    "nl": "Flip beeld aan"
+  },
+  "insightsTitleFalse": {
+    "en": "Flip view off",
+    "nl": "Flip beeld uit"
+  }
 }
