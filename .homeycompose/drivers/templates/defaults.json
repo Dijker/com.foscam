@@ -5,6 +5,7 @@
     },
     "icon": "{{driverPath}}/assets/icon.svg",
     "capabilities": [
+        "alarm_motion",
         "brightness",
         "contrast",
         "flip",
@@ -13,7 +14,7 @@
         "saturation",
         "sharpness"
     ],
-    "class": "other",
+    "class": "sensor",
     "pair": [
         {
             "id": "start",
@@ -158,6 +159,50 @@
                             }
                         }
                     ]
+                },
+                {
+                    "id": "status_polling",
+                    "type": "radio",
+                    "label": {
+                        "en": "Homey retrieves alarms",
+                        "nl": "Homey haalt alarmen op"
+                    },
+                    "value": "0",
+                    "hint": {
+                        "en": "Homey will interrogate the camera for motion alarms. Attention: increases the network traffic!",
+                        "nl": "Homey vraagt bewegingsalarmen op in de camera. Let op: verhoogt het netwerkverkeer!"
+                    },
+                    "values": [
+                        {
+                            "id": "0",
+                            "label": {
+                                "en": "Disabled",
+                                "nl": "Uitgeschakeld"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "Enabled",
+                                "nl": "Ingeschakeld"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "status_polling_interval",
+                    "type": "number",
+                    "label": {
+                        "en": "Homey alarm update interval"
+                    },
+                    "value": 1.5,
+                    "min": 0.5,
+                    "max": 5,
+                    "step": 0.5,
+                    "hint": {
+                        "en": "The Homey refresh interval (seconds) for interrogating the alarm status.",
+                        "nl": "Het Homey vernieuwingsinterval (seconden) om alarmen op te vragen."
+                    }
                 }
             ]
         },

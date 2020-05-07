@@ -21,6 +21,7 @@ Supported actions:
 
 Supported triggers:
 
+-  When motion is detected
 -  When the camera takes a snapshot
 
 Unsupported models:

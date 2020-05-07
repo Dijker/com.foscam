@@ -10,8 +10,6 @@ The update interval can be changed in the *device settings*.
 
 It would be highly appreciated if you could let me know when you're having trouble with a specific model.
 
-If you wonder why the motion detect trigger isn't available, please read [this](https://github.com/edwinvdpol/com.foscam/blob/master/MOTION.md).
-
 
 ## Supported actions
 - Create snapshot image (configure settings)
@@ -29,6 +27,7 @@ If you wonder why the motion detect trigger isn't available, please read [this](
 
 
 ## Supported triggers
+- When motion is detected
 - When the camera takes a snapshot
 
 

@@ -1,3 +1,6 @@
+## 2.2.0 / 2020-05-06
+- Added motion detection. axios update 0.19.2. 
+
 ## 2.1.3 / 2019-11-12
 - Added support for the new Homey App Store
 
